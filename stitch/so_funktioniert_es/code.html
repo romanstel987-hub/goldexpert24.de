@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GoldExpert24.de - So funktioniert es</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-surface-variant": "#4d4637",
+                    "on-tertiary-container": "#4a3f19",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eded",
+                    "surface": "#fcf9f8",
+                    "on-primary-container": "#503d00",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#f5e1ae",
+                    "background": "#fcf9f8",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "primary": "#755b00",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5e5e5e",
+                    "primary-container": "#c9a84c",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-primary": "#e6c364",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#e6c364",
+                    "on-secondary-fixed-variant": "#474747",
+                    "primary-fixed": "#ffe08f",
+                    "tertiary-container": "#bbaa7b",
+                    "secondary-fixed": "#e4e2e2",
+                    "outline": "#7e7665",
+                    "tertiary-fixed-dim": "#d8c594",
+                    "on-secondary-container": "#646464",
+                    "secondary-container": "#e4e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "outline-variant": "#d0c5b2",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#6b5d35",
+                    "on-tertiary-fixed-variant": "#524620",
+                    "on-primary-fixed-variant": "#584400",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#755b00",
+                    "on-tertiary-fixed": "#231b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"],
+                    "mono": ["DM Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .editorial-gradient {
+            background: linear-gradient(45deg, #755b00 0%, #c9a84c 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm shadow-stone-200/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-serif font-bold text-stone-900 dark:text-stone-50">GoldExpert24.de</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 font-serif tracking-tight hover:text-[#c9a84c] transition-colors duration-300" href="#">Ankaufswerte</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif tracking-tight hover:text-[#c9a84c] transition-colors duration-300" href="#">Preise</a>
+<a class="text-[#755b00] border-b-2 border-[#c9a84c] pb-1 font-serif tracking-tight" href="#">Ablauf</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif tracking-tight hover:text-[#c9a84c] transition-colors duration-300" href="#">Sicherheit</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif tracking-tight hover:text-[#c9a84c] transition-colors duration-300" href="#">FAQ</a>
+</div>
+<button class="editorial-gradient text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm transition-transform active:scale-95 duration-200">
+                Versandtasche bestellen
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="label-md font-mono text-primary tracking-widest block mb-4">DER PROZESS</span>
+<h1 class="text-5xl md:text-6xl font-headline font-bold text-on-surface leading-tight mb-6">
+                        Ihr Gold in <br/><span class="text-primary italic">sicheren Händen.</span>
+</h1>
+<p class="text-body-lg text-secondary max-w-lg mb-10 leading-relaxed">
+                        Transparenz ist unser höchstes Gut. Erfahren Sie, wie wir Ihre Wertgegenstände mit modernster Technik prüfen und Ihnen innerhalb von 24 Stunden den Höchstwert auszahlen.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="editorial-gradient text-on-primary px-8 py-4 rounded-lg font-semibold flex items-center gap-2 group transition-all duration-300">
+                            Jetzt starten
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-outline-variant/20 px-8 py-4 rounded-lg font-semibold text-primary hover:bg-surface-container-low transition-colors">
+                            Sicherheitsgarantie
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+<img alt="Premium gold bars and scale" class="w-full h-full object-cover" data-alt="Close-up of elegant gold bars and a precision jewelry scale on a dark, reflective surface with soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO9xdWsepWx4__k6XvQiwN-bd0KGDREKAlnHJBXidMHGRyWzpNN6TEPXE9v2un6pBz7imaNe5cyu47tZfWIps_Z1brGWxEe3o52xFzUZ5Pw5XQ_gIHQQ8yUQeqmTyN9MJoyQnTBcU1JCZ5ypGcqquJqHkXRLn6lqejRGxnR2gbuLBfIpGpSsLGHjegg7D5Hk12-EEEkEpCJi0RPChsGLhHqEiTUU0oVqJfsGlvrl32JFYaEBpL7GU0YHSDi3NujUSZdNXoSE46J4M"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl border border-outline-variant/10 max-w-xs">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-headline font-bold">Zertifizierte Analyse</span>
+</div>
+<p class="text-xs text-secondary leading-relaxed">Unsere Gutachter nutzen RFA-Spektrometer für zerstörungsfreie Materialprüfung auf höchstem Niveau.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Explainer Section -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-headline font-bold mb-4">Der 60-Sekunden Überblick</h2>
+<p class="text-secondary">Sehen Sie, wie einfach und sicher der Goldankauf bei GoldExpert24 funktioniert.</p>
+</div>
+<div class="relative aspect-video rounded-xl overflow-hidden bg-stone-900 shadow-2xl group cursor-pointer">
+<img alt="Video Thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Interior of a modern high-end jewelry laboratory with white surfaces and sophisticated testing equipment in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsrCsqCW8Ex293Q_K24zoT9bYlQZ_R9FJ5m6wUET3i9ZfRxC5DDC4J_5CHqNhEyspKeIl3-CaNfcSA9gzVNnTK84rgAOIftfWUgTAbjOEjy696ogJLT33OeC81kktnybpWQULp3pCwfpHuKYayYbXuI4f-aIV0AoR96az71wobP0m4Yva5cvReDM4E57qY4dQxJo4ByeZrIF1DypFyhqmiR4Dw_51pRzdpT5tBYVUWxx-sNFY4c9r76AfwnyP5sAI3zRORjCSWqCU"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl fill-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Steps -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="space-y-32">
+<!-- Step 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white font-mono font-bold mb-6">01</div>
+<h3 class="text-3xl font-headline font-bold mb-6">Wert unverbindlich berechnen</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Nutzen Sie unseren tagesaktuellen Goldrechner. Geben Sie einfach das Karatgewicht oder die Legierung Ihrer Gegenstände ein. Wir garantieren Kurse auf Basis der Londoner Börse – sekundengenau aktualisiert.
+                        </p>
+<div class="p-6 bg-surface-container-low rounded-lg border-l-4 border-primary">
+<span class="font-mono text-primary text-sm block mb-1">LIVE KURS</span>
+<div class="text-2xl font-mono font-bold text-on-surface">58,42 € <span class="text-sm font-normal text-secondary">/ Gramm Gold 999</span></div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Calculator and gold" class="rounded-xl shadow-lg" data-alt="Minimalist desk setup with a sleek modern calculator, a fountain pen, and a single small gold nugget on a white stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHp0SrPjDCl3cVK0_s_yWZtG2uTdcOV1UOqF5h4wxjZLfik_y3uK94pwVWFHeLvT7iqQe0CBXraqEPysv7iuAt7YUxmhFtixMBFAhactz2gfQxqg5IoLwyJKVaUNxG6Qusg-5HiajWguUjVJvinVycIFaT4JPYZpIjwE3T-h23i1sB4Ql2PfiI90hYGEkk_omXGtUMxKWc8LnwDxSBklmYe8X5KwYtvNNZD93nLYLcm8VhaRqV_mIidofiApMMqW3biajDqe_siZk"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<img alt="Shipping box" class="rounded-xl shadow-lg" data-alt="A clean white shipping box with a security seal being placed on a wooden table under soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn1S7uDFqLrIuWYsK-kwHIHQ5000D0AsuyBQcdvhd6j879GmwfXSJaXiUOwZzu4jSvdDyfaFrtdh-ddrNVj9ypC5_-ewLFwPBCAYgYwPf1N7MwKCocnbN9ynxHcx7siMz9h9d3Swsec9xWL8Sudulvz6lczETyJz2m_rOv3VnaBLT7AAA_tGFZw4_b1ivsHaTv9dqpdqXEBYnhQzJZBxuC7LKBCwuSYDAEqJ701yank1Aqr1s4pYIO3BLzvojxZ4YyVde27J9FhC8"/>
+</div>
+<div>
+<div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white font-mono font-bold mb-6">02</div>
+<h3 class="text-3xl font-headline font-bold mb-6">Kostenloser &amp; Versicherter Versand</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Bestellen Sie Ihre kostenlose Versandtasche. Wir senden Ihnen ein vorfrankiertes DHL-Paket, das bis zu 2.500 € (optional bis 50.000 €) versichert ist. Sie müssen nichts weiter tun, als das Paket abzugeben oder abholen zu lassen.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span> DHL Express Abholung möglich
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span> Echtzeit-Tracking via SMS/Email
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white font-mono font-bold mb-6">03</div>
+<h3 class="text-3xl font-headline font-bold mb-6">Professionelle Analyse im Labor</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Sobald Ihr Paket eintrifft, wird es unter Videoaufzeichnung geöffnet. Unsere Experten prüfen die Stücke mittels RFA-Analyse und Ultraschall. Sie erhalten ein detailliertes Protokoll und ein verbindliches Angebot per E-Mail.
+                        </p>
+<div class="flex gap-4">
+<div class="flex-1 p-4 bg-white rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">biotech</span>
+<p class="text-xs font-bold">Modernste Sensorik</p>
+</div>
+<div class="flex-1 p-4 bg-white rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">videocam</span>
+<p class="text-xs font-bold">Video-Dokumentation</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Lab testing" class="rounded-xl shadow-lg" data-alt="A technician in a white lab coat using a high-tech gold testing machine in a bright laboratory environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mswD3zML9n-9MtI2xNEAcaoopTvG0ZTQ-_BgyGHsQYG6htETA1YL27gTOUKnIgDq7RBWe8D3C7tELj-YlGR355G7pvkvPzayhwcxqtNzvgMln1ShBzqzYu4a9_UVgozqXT58WTSpFhScaRzzuAqQuqoX2VytTxqzbl8wI3dIvaQe2sW7QZNNLiRyBU11hQ6JRZDU2-_99QkMI5qzXONjC42220JICuFpiweMi2cKOrZ4LJthAIGXs5FFCT-_NtHBOuxSbGwzqV8"/>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<img alt="Bank transfer on phone" class="rounded-xl shadow-lg" data-alt="A person holding a modern smartphone showing a bank transfer confirmation screen with a warm blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYbrPzj0plab9r37d7fyC8EhzaYx4JW8eciHRNzjrlZS_ltLxlPjS3kSo2dCGyoG4FvmR77wfVfX2UBmnlmxVtNPd3CBBjOotnCRID5MXe2sb9MSAEE_vRxyOQDfuCyEgT8p1yPo1g3feE1YeztpQNjFZ5Y__yl2-m-73_CYwfi5IZAB4pOUCGNj7503vBZu1CQ9ZeCCndWf-OJYBJWCClIJUN7aKWUX6TybtBBxxfb25ub_6MIT75Gp0ab3wC5jDJ3BrOaYDee9c"/>
+</div>
+<div>
+<div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white font-mono font-bold mb-6">04</div>
+<h3 class="text-3xl font-headline font-bold mb-6">Sofortige Auszahlung</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Sind Sie mit dem Angebot einverstanden? Ein Klick genügt und wir weisen die Zahlung sofort an. Das Geld ist meist innerhalb weniger Stunden auf Ihrem Konto. Sollten Sie nicht zufrieden sein, senden wir Ihre Ware vollversichert zurück.
+                        </p>
+<div class="flex items-center gap-4 text-primary font-bold">
+<span class="material-symbols-outlined">bolt</span>
+<span>Echtzeit-Überweisung (SEPA Instant)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Shipping Safety -->
+<section class="bg-stone-900 text-white py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-1">
+<h2 class="text-4xl font-headline font-bold mb-6">Sicherheit ist <br/><span class="text-primary-container">kein Zufall.</span></h2>
+<p class="text-stone-400">Jeder Schritt wird lückenlos dokumentiert und ist über renommierte Logistikpartner voll abgesichert.</p>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-8 rounded-xl bg-stone-800/50 border border-stone-700">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">shield_with_heart</span>
+<h4 class="text-xl font-bold mb-2">DHL Vollversicherung</h4>
+<p class="text-sm text-stone-400">Ihre Sendung ist ab dem Moment der Übergabe an DHL gegen Verlust und Beschädigung bis zum vollen Wert versichert.</p>
+</div>
+<div class="p-8 rounded-xl bg-stone-800/50 border border-stone-700">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">location_searching</span>
+<h4 class="text-xl font-bold mb-2">Live Tracking</h4>
+<p class="text-sm text-stone-400">Verfolgen Sie jeden Millimeter Ihrer Sendung. Sie erhalten Status-Updates per SMS, sobald wir Ihr Paket erhalten.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 px-8 max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-bold mb-4">Häufige Fragen zum Ablauf</h2>
+<p class="text-secondary">Alles, was Sie über den Prozess wissen müssen.</p>
+</div>
+<div class="space-y-6">
+<div class="group border-b border-outline-variant/30 pb-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="text-lg font-headline font-bold">Was passiert, wenn mir das Angebot nicht gefällt?</span>
+<span class="material-symbols-outlined group-hover:rotate-45 transition-transform">add</span>
+</button>
+<div class="mt-4 text-secondary leading-relaxed">
+                        Kein Problem! Wir bieten eine 100% Gold-Zurück-Garantie. Wenn Sie unser Angebot ablehnen, senden wir Ihnen Ihre Wertgegenstände kostenlos und vollversichert zurück. Ohne Wenn und Aber.
+                    </div>
+</div>
+<div class="group border-b border-outline-variant/30 pb-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="text-lg font-headline font-bold">Wie hoch ist die Versicherungssumme?</span>
+<span class="material-symbols-outlined group-hover:rotate-45 transition-transform">add</span>
+</button>
+<div class="mt-4 text-secondary leading-relaxed">
+                        Die Standard-Versandtasche ist bis 2.500 € versichert. Für größere Werte bieten wir eine Kurier-Abholung an, die bis zu 50.000 € (auf Anfrage auch mehr) abgesichert ist.
+                    </div>
+</div>
+<div class="group border-b border-outline-variant/30 pb-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="text-lg font-headline font-bold">Wie schnell ist das Geld auf meinem Konto?</span>
+<span class="material-symbols-outlined group-hover:rotate-45 transition-transform">add</span>
+</button>
+<div class="mt-4 text-secondary leading-relaxed">
+                        In der Regel überweisen wir den Betrag innerhalb von 24 Stunden nach Annahme des Angebots. Dank SEPA Instant Transfer ist der Betrag bei den meisten Banken innerhalb weniger Minuten verfügbar.
+                    </div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="mb-32 px-8 max-w-7xl mx-auto">
+<div class="editorial-gradient rounded-2xl p-12 md:p-20 text-center text-white relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8">Bereit für ein faires Angebot?</h2>
+<p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto">Bestellen Sie jetzt Ihre kostenlose Versandtasche und verwandeln Sie Ihr Gold in bares Geld.</p>
+<button class="bg-white text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-surface-container-low transition-colors shadow-xl">
+                        Jetzt Versandtasche bestellen
+                    </button>
+<p class="mt-6 text-sm opacity-75">100% Kostenlos • 100% Versichert • 100% Sicher</p>
+</div>
+<!-- Decorative element -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-black/10 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-2xl font-serif text-white">GoldExpert24.de</div>
+<p class="text-stone-500 font-serif text-sm">Ihr vertrauensvoller Partner für den Ankauf von Gold, Silber und Platin. Präzision und Fairness seit über 15 Jahren.</p>
+</div>
+<div>
+<h4 class="text-[#c9a84c] font-headline mb-6 font-bold">Services</h4>
+<ul class="space-y-4 text-stone-300 font-serif text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Ankaufswerte</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Edelmetall-Lexikon</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Goldrechner</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Versand-Infos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#c9a84c] font-headline mb-6 font-bold">Rechtliches</h4>
+<ul class="space-y-4 text-stone-300 font-serif text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Impressum</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Datenschutz</a></li>
+<li><a class="hover:text-white transition-colors" href="#">AGB</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Widerrufsbelehrung</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#c9a84c] font-headline mb-6 font-bold">Kontakt</h4>
+<ul class="space-y-4 text-stone-300 font-serif text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span> +49 (0) 800 123 456</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span> info@goldexpert24.de</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">location_on</span> Goldweg 1, 80331 München</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-stone-800 text-center">
+<p class="text-stone-500 text-xs font-serif">© 2024 GoldExpert24.de - Alle Rechte vorbehalten.</p>
+</div>
+</footer>
+</body></html>

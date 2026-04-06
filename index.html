@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GoldExpert24.de - Gold verkaufen. Ehrlich. Transparent. Einfach.</title>
+<meta name="description" content="Gold verkaufen zum tagesaktuellen Bestpreis. Versichert bis 500.000 Euro. Auszahlung in 24h. Kostenlose Versandtasche anfordern."/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-error": "#ffffff",
+          "on-surface": "#1c1b1b",
+          "on-surface-variant": "#4d4637",
+          "on-tertiary-container": "#4a3f19",
+          "error": "#ba1a1a",
+          "surface-container": "#f0eded",
+          "surface": "#fcf9f8",
+          "on-primary-container": "#503d00",
+          "on-error-container": "#93000a",
+          "tertiary-fixed": "#f5e1ae",
+          "background": "#fcf9f8",
+          "surface-variant": "#e5e2e1",
+          "on-primary-fixed": "#241a00",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-highest": "#e5e2e1",
+          "on-primary": "#ffffff",
+          "surface-container-high": "#eae7e7",
+          "primary": "#755b00",
+          "error-container": "#ffdad6",
+          "secondary": "#5e5e5e",
+          "primary-container": "#c9a84c",
+          "on-tertiary": "#ffffff",
+          "inverse-on-surface": "#f3f0ef",
+          "surface-dim": "#dcd9d9",
+          "inverse-primary": "#e6c364",
+          "secondary-fixed-dim": "#c8c6c6",
+          "surface-bright": "#fcf9f8",
+          "on-secondary": "#ffffff",
+          "surface-container-low": "#f6f3f2",
+          "primary-fixed-dim": "#e6c364",
+          "on-secondary-fixed-variant": "#474747",
+          "primary-fixed": "#ffe08f",
+          "tertiary-container": "#bbaa7b",
+          "secondary-fixed": "#e4e2e2",
+          "outline": "#7e7665",
+          "tertiary-fixed-dim": "#d8c594",
+          "on-secondary-container": "#646464",
+          "secondary-container": "#e4e2e2",
+          "on-secondary-fixed": "#1b1c1c",
+          "outline-variant": "#d0c5b2",
+          "inverse-surface": "#313030",
+          "tertiary": "#6b5d35",
+          "on-tertiary-fixed-variant": "#524620",
+          "on-primary-fixed-variant": "#584400",
+          "on-background": "#1c1b1b",
+          "surface-tint": "#755b00",
+          "on-tertiary-fixed": "#231b00"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        fontFamily: {
+          headline: ["Noto Serif"],
+          body: ["Manrope"],
+          label: ["Inter"],
+          mono: ["DM Mono"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- Navigation -->
+<nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm shadow-stone-200/10">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="block"><img src="assets/logo-dark.svg" alt="GoldExpert24.de" class="h-8"></a>
+    <!-- Mobile menu button -->
+    <button id="mobileMenuBtn" class="md:hidden flex items-center text-on-surface">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-headline tracking-tight text-[#755b00] border-b-2 border-[#c9a84c] pb-1 transition-colors duration-300" href="index.html">Ankaufswerte</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="preise.html">Preise</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="ablauf.html">Ablauf</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="sicherheit.html">Sicherheit</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="faq.html">FAQ</a>
+    </div>
+    <a href="#versandtasche" class="hidden md:inline-block bg-gradient-to-tr from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm hover:scale-95 duration-200 transition-transform">
+      Versandtasche bestellen
+    </a>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-outline-variant/20 bg-white/95 backdrop-blur-md">
+    <div class="flex flex-col px-6 py-4 gap-4">
+      <a class="font-headline tracking-tight text-[#755b00] font-bold" href="index.html">Ankaufswerte</a>
+      <a class="font-headline tracking-tight text-stone-600" href="preise.html">Preise</a>
+      <a class="font-headline tracking-tight text-stone-600" href="ablauf.html">Ablauf</a>
+      <a class="font-headline tracking-tight text-stone-600" href="sicherheit.html">Sicherheit</a>
+      <a class="font-headline tracking-tight text-stone-600" href="faq.html">FAQ</a>
+      <a href="#versandtasche" class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm text-center hover:scale-95 duration-200 transition-transform">
+        Versandtasche bestellen
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative pt-16 md:pt-20 pb-24 md:pb-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-10 gap-12 lg:gap-16 items-center">
+    <!-- Left Content (60%) -->
+    <div class="lg:col-span-6">
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-headline text-on-surface leading-[1.1] tracking-tight mb-8">
+        Gold verkaufen. <br/>
+        <span class="text-primary italic">Ehrlich.</span> Transparent. Einfach.
+      </h1>
+      <p class="text-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+        Wir bewerten Ihr Edelmetall nach tagesaktuellen Borsenkursen &ndash; ohne versteckte Abzuge. Deutschlands diskreteste Losung fur den Goldankauf.
+      </p>
+      <!-- Trust Icons -->
+      <div class="flex flex-wrap gap-6 md:gap-8 items-center opacity-80">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">verified</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Zertifiziert</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">security</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Versichert bis 500k&euro;</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">update</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">24h Auszahlung</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Calculator (40%) -->
+    <div class="lg:col-span-4">
+      <div class="bg-surface-container-lowest rounded-xl shadow-2xl shadow-stone-200/50 border-t-4 border-primary p-6 md:p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+          <span class="material-symbols-outlined text-[120px]">calculate</span>
+        </div>
+
+        <!-- Metal Switcher -->
+        <div class="flex bg-surface-container-low rounded-lg p-1 mb-8" id="metalTabs">
+          <button class="metal-tab flex-1 py-2 text-sm font-medium bg-white shadow-sm rounded-lg text-primary" data-metal="gold">Gold</button>
+          <button class="metal-tab flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface rounded-lg" data-metal="silber">Silber</button>
+          <button class="metal-tab flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface rounded-lg" data-metal="platin">Platin</button>
+        </div>
+
+        <!-- Alloy Selection -->
+        <label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-4">Feingehalt wahlen</label>
+        <div class="grid grid-cols-3 gap-2 mb-8" id="alloyGrid">
+          <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.333" data-label="333 (8k)">333 (8k)</button>
+          <button class="alloy-btn border border-primary py-3 rounded-lg text-sm text-primary font-bold bg-primary/5" data-purity="0.585" data-label="585 (14k)">585 (14k)</button>
+          <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.750" data-label="750 (18k)">750 (18k)</button>
+          <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.900" data-label="900">900</button>
+          <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.916" data-label="916 (22k)">916 (22k)</button>
+          <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.999" data-label="999 (24k)">999 (24k)</button>
+        </div>
+
+        <!-- Weight Input -->
+        <div class="mb-8">
+          <label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Gewicht in Gramm</label>
+          <input id="weightInput" class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary focus:ring-0 text-3xl font-mono py-4 placeholder:text-surface-dim" placeholder="0.00" type="number" min="0" step="0.01"/>
+        </div>
+
+        <!-- Result Display -->
+        <div class="bg-surface-dim/20 rounded-xl p-6 mb-8 text-center">
+          <span class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Voraussichtlicher Ankaufswert</span>
+          <div class="text-4xl font-mono font-bold text-on-surface" id="calcResult">
+            0,00 <span class="text-xl font-normal text-primary">&euro;</span>
+          </div>
+        </div>
+
+        <a href="#versandtasche" class="block w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform text-center">
+          Versandtasche anfordern
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Trust Band -->
+<section class="bg-surface-container-low border-y border-outline-variant/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-10 flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-8">
+    <div class="flex items-center gap-4">
+      <div class="flex text-[#ffb400]">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+      </div>
+      <div>
+        <p class="font-bold text-sm">Trustpilot 4.9/5.0</p>
+        <p class="text-xs text-on-surface-variant">Aus uber 1.200 Bewertungen</p>
+      </div>
+    </div>
+    <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-stone-400">lock</span>
+      <p class="text-sm font-medium">SSL Verschlusselt</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-stone-400">security</span>
+      <p class="text-sm font-medium">500.000&euro; Versicherung</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-stone-400">speed</span>
+      <p class="text-sm font-medium">24h Auszahlungs-Garantie</p>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-20 md:py-32 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-headline mb-4">In 4 Schritten zu Ihrem Geld</h2>
+    <p class="text-on-surface-variant mb-16 md:mb-20 max-w-2xl mx-auto">Sicher, diskret und vollversichert. Der einfachste Weg, Edelmetalle zu veraussern.</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
+      <!-- Connector line for desktop -->
+      <div class="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px border-t border-dashed border-outline-variant"></div>
+      <!-- Step 1 -->
+      <div class="relative z-10 flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-lg shadow-stone-200/50 mb-6 border border-outline-variant/20">
+          <span class="material-symbols-outlined text-3xl text-primary">home</span>
+        </div>
+        <h3 class="font-bold mb-2">Tasche anfordern</h3>
+        <p class="text-sm text-on-surface-variant px-4">Kostenlose Versandtasche bequem nach Hause bestellen.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative z-10 flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-lg shadow-stone-200/50 mb-6 border border-outline-variant/20">
+          <span class="material-symbols-outlined text-3xl text-primary">package_2</span>
+        </div>
+        <h3 class="font-bold mb-2">Sicher versenden</h3>
+        <p class="text-sm text-on-surface-variant px-4">Gold einlegen und kostenfrei bei der Post abgeben.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="relative z-10 flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-lg shadow-stone-200/50 mb-6 border border-outline-variant/20">
+          <span class="material-symbols-outlined text-3xl text-primary">search</span>
+        </div>
+        <h3 class="font-bold mb-2">Analyse &amp; Angebot</h3>
+        <p class="text-sm text-on-surface-variant px-4">Unsere Experten prufen Ihr Gold unter Videoaufsicht.</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="relative z-10 flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-lg shadow-stone-200/50 mb-6 border border-outline-variant/20">
+          <span class="material-symbols-outlined text-3xl text-primary">euro</span>
+        </div>
+        <h3 class="font-bold mb-2">Geld erhalten</h3>
+        <p class="text-sm text-on-surface-variant px-4">Sofortige Auszahlung per Blitzberweisung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transparency Section -->
+<section class="py-20 md:py-32 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-headline mb-8">So berechnen wir Ihren Preis</h2>
+        <p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+          Keine versteckten Gebuhren. Keine &bdquo;Bearbeitungspauschalen&ldquo;. Wir setzen auf mathematische Prazision und volle Transparenz. Unser Algorithmus aktualisiert sich alle 60 Sekunden basierend auf dem London Bullion Market.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>Echtzeit-Anbindung an globale Goldborsen</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>Prazise Gewichtsermittlung mit geeichten Waagen</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>Anerkannte RFA-Spektralanalyse der Legierung</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Calculation Visual Card -->
+      <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-outline-variant/10 relative overflow-hidden">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-8">
+            <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Formel der Fairness</span>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-12">
+            <div class="flex flex-col items-center">
+              <span class="text-2xl md:text-3xl font-mono font-bold">Borsenkurs</span>
+              <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Aktueller Spotpreis</span>
+            </div>
+            <span class="text-2xl text-primary font-bold">&times;</span>
+            <div class="flex flex-col items-center">
+              <span class="text-2xl md:text-3xl font-mono font-bold">Reinheit</span>
+              <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Karatzahl/Legierung</span>
+            </div>
+            <span class="text-2xl text-primary font-bold">&times;</span>
+            <div class="flex flex-col items-center">
+              <span class="text-2xl md:text-3xl font-mono font-bold">Faktor</span>
+              <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Feste Handelsspanne</span>
+            </div>
+          </div>
+          <div class="w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-12"></div>
+          <div class="text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1 bg-primary/5 rounded-full mb-4">
+              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span class="text-xs font-medium text-primary">Live Preis-Update</span>
+            </div>
+            <div class="text-4xl md:text-5xl font-mono font-bold text-on-surface">
+              67,42 &euro; <span class="text-lg font-normal text-on-surface-variant">/ g</span>
+            </div>
+            <p class="text-xs text-on-surface-variant mt-4">Referenzpreis fur Feingold 999.9</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Grid -->
+<section class="py-20 md:py-32 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-4">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-headline mb-4">Was wir ankaufen</h2>
+        <p class="text-on-surface-variant">Wir akzeptieren nahezu alle Formen von Edelmetallen.</p>
+      </div>
+      <button class="text-primary font-medium hover:underline flex items-center gap-2">
+        Alle Kategorien <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </button>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+      <!-- Schmuck -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Goldschmuck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5jHuKYHS8E7N0pMAPzWEfQvN4IxvmomAKBCl6dD1MJjHhKPO_lGqpaFjdstBWEWS8rFLB4TMJI0tPF3VyZ0lcruIcaho2XltrHRy5XRjGDwC9ZJG1PgQlqq_dg-ARqaPUZNyeCqn5xgFSF8Ym5y0ibAACr_M7ZmTKsP07rHf0mxOPdv1N-ihcIZy6dLBcc8BuQC7DyReMzCk_PvqM1oUiMf8BWQVgoBw8LzG7_p65gCAKhvCy5ju9gQBInGcH1q6mI_W9YNdhISM"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Schmuck</h3>
+      </div>
+      <!-- Zahngold -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Zahngold" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXI4GzxKRzBWt2Q3ZKF8_0avAhg7HpF22uRWOZBHwhgSN2Xt6TEI2dADLZytJ3D2iZKRdlmD6tvmofYqFCZuhS2UQ8qLevg_mqIGMooDLT7dEOxFsfJqhTo2UPS3IBawHBMo2R0j4zvASjdi2uqeIApO8yrmdyKg3y3tJg0f3AxkLtvTnfgTk19zLWptcVT62NQJYiLaT_Clj__RE_mYd15t7x6fKGk-Zuz00OjG1Rgi-to4j2Lclm5jLvye2d4wp67tLztfYe3cg"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Zahngold</h3>
+      </div>
+      <!-- Barren -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Goldbarren" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhgtem1xCZvA-4afsswyS8lPPoz8yZaQ5U2mpJPytc61rQzPFfjZyP9DtOzG8Dgg7ber_brnrAmYPUq2KJBH6AmK1cJ7bkowc5XVSFCV7W7AWjY6cDfQLqFvasYtk4DLzD8BKPeij0mVwqIxF-K8YEtyWvdJLrFuEMsmMNBrOH8AtYy4ZHA6AqdlrZDelVpxB-f6yzd9ZiQC7SDU11vgjo04vQmMourGGoBUc-VYNquXBrxBxZIjSPM5m9Ko4uuG3IuyCVPNsBY2s"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Barren</h3>
+      </div>
+      <!-- Munzen -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Goldmunzen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYPfIoq8qOAM32ejUpnV3pNX2ndOb9Rskr8AAApMzvsEkxwKYSuzpe_fWMemhQVQdeRlNn4MIkeXjxePK0y3_hzlQmcjwAwM7VNqmWPaosnUSYwq401RUbtHmfkPOoc5gwyBOQiv7n1stVWkBn8c5AFq2jI4FwKPRU2SHS6GWurRJG5YzzTzvyaXTPYGSFe3TVZzxM-lSZYLmnvzO8ppSbxlyUlcoHi5_XR-j-3kcFqPUUWmHSzo_XgXmW9rB0thksMG8iGuBZh8I"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Munzen</h3>
+      </div>
+      <!-- Silber -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Silber" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdorvShCXbZZQp9pKEbbg298PYcj5CjjiA4NJYsW2-8l62IC6GS4z6Ol9j7zuiPgNfb0cUuiSBnUCyTWm2af5oK_YvsrrkK_vIIZFvM7K40dlnFSYHfuqY9thuStY-1opd2odIynPaq9TfdkN8sbL5zEvAU0ipGMTiMy2Q-nIhc7IR3r-bT5T2YnjVxCzMMHUhnxwPilO01kED4NhEEXjz1I1hPuQpBQBZrZN6KRKP-TFRw4V24QsXODZfHbtztr4UxNtkkgD7SR8"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Silber</h3>
+      </div>
+      <!-- Platin -->
+      <div class="group cursor-pointer">
+        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+          <img alt="Platin" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgv6ibQjA4V-S7x9JPqyXvA18gJXpipCAizXWG5bMxFwB2jiZpGjCbVCWRx_Xuwq-IRJPENnNhGVyy15nT4PZgvECpOu5jfV01L2oLf3G2zrXoOWE7mTRTYxJTruM3CU3dAa7IHT5L3uNuxihVyeXFwLcW9G-tgNrFuehGU47--SVvqRKDZjRrzQkQ6Nsmmm-L99ZYHQ14IH7P5D-DG75TF-i9z_0OxOqSkf8-EOQpjHN_-s0DRKqAlgi6nePJCGSB5pjWwvq2-xg"/>
+        </div>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Platin</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team / About Teaser -->
+<section class="py-20 md:py-32 bg-surface-container-lowest">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="bg-stone-900 rounded-[2rem] overflow-hidden flex flex-col lg:flex-row min-h-[400px] lg:min-h-[500px]">
+      <div class="flex-1 p-10 md:p-16 lg:p-24 flex flex-col justify-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-headline text-white mb-8">Wir sind echte Menschen.</h2>
+        <p class="text-stone-400 text-lg leading-relaxed mb-10">
+          In einer Welt voller automatisierter Portale glauben wir an den Wert personlicher Expertise. Unser Team aus erfahrenen Gutachtern und Goldschmieden steht Ihnen bei jedem Schritt mit Rat und Tat zur Seite.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30">
+            <img alt="Stefan Hartmann" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DKF7TLqg6TNXb6fdUUM1NpLkzSsHtCaht9SShe_9V47wv85vjAhfV_6HOPc0AzghsHOmvhzJfvfWE2eK8iNcf_R178ZYg_5R1QLJUAoKF5dDpI-4Hq3OyE2hMwEAEMWRQ0nUvdkwlbjKPK_fGqsH1Z3EuBDf3xtyS3owwZuKaJMglM0glxjk1Cy85_ZE0Ct4XglsYH4lKpnE6uwekvVIjqlLlL689vWgEkGob7aB-PrSg8o4sLfyslpDxO_D970h_x_R2WHFAio"/>
+          </div>
+          <div>
+            <p class="text-white font-bold">Stefan Hartmann</p>
+            <p class="text-stone-500 text-sm italic">Chef-Gutachter</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 relative min-h-[300px] lg:min-h-0">
+        <img alt="Unser Team bei der Arbeit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8QWH7c5096aIXRhiBmwq5mOKG8syzI1yZLj_im6AbtjYt0ZKOwotyHahg80tLMMEv0EVn8OVjJ0JuQr29kxcV-v9W0eki73dbay3S6EnR58ZNpS1M1vbXXLS2YFB4Nu7fshsN2ySG8d3J8C3ygg3isRA3pSubBZ-KYpDmhkUC7dfLhrTtYJmjQdMdTQ9T-fqOlynA_xgJKCEYBgNhhhWPz3HOUQmban8DzT0K6zd3w02oie2rvgzvhCfRssdtQ1KSqknsLzAmMNA"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-stone-900 via-transparent to-transparent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Accordion -->
+<section class="py-20 md:py-32 bg-surface">
+  <div class="max-w-3xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl font-headline mb-4">Haufige Fragen</h2>
+      <p class="text-on-surface-variant">Alles was Sie uber den Ankauf wissen mussen.</p>
+    </div>
+    <div class="space-y-6" id="faqAccordion">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item border-b border-outline-variant/30 pb-6">
+        <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg hover:text-primary transition-colors group">
+          Ist der Versand wirklich versichert?
+          <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
+        </button>
+        <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
+          <p>Ja, absolut. Wir stellen Ihnen eine Versandtasche zur Verfugung, die ab dem Moment der Einlieferung bei der Deutschen Post vollversichert ist. Fur besonders wertvolle Sendungen uber 2.500&euro; bieten wir zudem einen kostenlosen Wertkurier-Service an.</p>
+        </div>
+      </div>
+      <!-- FAQ Item 2 -->
+      <div class="faq-item border-b border-outline-variant/30 pb-6">
+        <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg hover:text-primary transition-colors group">
+          Wie lange dauert die Auszahlung?
+          <span class="material-symbols-outlined text-stone-400 group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
+        </button>
+        <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
+          <p>In der Regel erhalten Sie unser Angebot am Tag des Sendungseingangs. Nach Ihrer Bestatigung uberweisen wir den Betrag sofort. Das Geld ist meist innerhalb weniger Stunden, spatestens am nachsten Werktag auf Ihrem Konto.</p>
+        </div>
+      </div>
+      <!-- FAQ Item 3 -->
+      <div class="faq-item border-b border-outline-variant/30 pb-6">
+        <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg hover:text-primary transition-colors group">
+          Was passiert, wenn mir das Angebot nicht gefallt?
+          <span class="material-symbols-outlined text-stone-400 group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
+        </button>
+        <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
+          <p>Transparenz bedeutet fur uns auch Wahlfreiheit. Falls Sie unser Angebot ablehnen, schicken wir Ihnen Ihre Gegenstande kostenfrei und versichert wieder zuruck. Ohne Wenn und Aber.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-stone-950 w-full pt-16 pb-8">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <div class="col-span-1">
+      <div class="mb-6"><img src="assets/logo-white.svg" alt="GoldExpert24.de" class="h-8 text-white"></div>
+      <p class="font-headline text-stone-300 text-sm leading-relaxed mb-6">
+        Ihr vertrauensvoller Partner fur den Ankauf von Edelmetallen. Sicher, diskret und zum tagesaktuellen Bestpreis.
+      </p>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">public</span>
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">share</span>
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">mail</span>
+      </div>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+      <ul class="space-y-4">
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="index.html">Ankaufswerte</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="preise.html">Preise</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="ablauf.html">Ablauf</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="sicherheit.html">Sicherheit</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Rechtliches</h4>
+      <ul class="space-y-4">
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Impressum</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Datenschutz</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">AGB</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Widerrufsbelehrung</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Kontakt</h4>
+      <ul class="space-y-4 text-stone-300 text-sm">
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">call</span>
+          0800 123 456 78
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">mail</span>
+          info@goldexpert24.de
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">location_on</span>
+          Edelmetallzentrum Munchen
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-8 mt-16 pt-8 border-t border-white/5 text-center">
+    <p class="font-headline text-stone-500 text-xs">&copy; 2026 GoldExpert24.de &ndash; Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+(function() {
+  // ==================
+  // Mobile Menu Toggle
+  // ==================
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+      icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+  }
+
+  // ==================
+  // Calculator Logic
+  // ==================
+  const PRICES = {
+    gold:   67.42,
+    silber: 0.83,
+    platin: 29.50
+  };
+
+  const ALLOYS = {
+    gold:   [
+      { purity: 0.333, label: '333 (8k)' },
+      { purity: 0.585, label: '585 (14k)' },
+      { purity: 0.750, label: '750 (18k)' },
+      { purity: 0.900, label: '900' },
+      { purity: 0.916, label: '916 (22k)' },
+      { purity: 0.999, label: '999 (24k)' }
+    ],
+    silber: [
+      { purity: 0.800, label: '800' },
+      { purity: 0.835, label: '835' },
+      { purity: 0.925, label: '925' },
+      { purity: 0.999, label: '999' }
+    ],
+    platin: [
+      { purity: 0.585, label: '585' },
+      { purity: 0.750, label: '750' },
+      { purity: 0.850, label: '850' },
+      { purity: 0.900, label: '900' },
+      { purity: 0.950, label: '950' },
+      { purity: 0.999, label: '999' }
+    ]
+  };
+
+  let currentMetal = 'gold';
+  let currentPurity = 0.585;
+  const FACTOR = 0.95;
+
+  const metalTabs = document.querySelectorAll('.metal-tab');
+  const alloyGrid = document.getElementById('alloyGrid');
+  const weightInput = document.getElementById('weightInput');
+  const calcResult = document.getElementById('calcResult');
+
+  function setActiveMetal(metal) {
+    currentMetal = metal;
+    metalTabs.forEach(function(tab) {
+      if (tab.dataset.metal === metal) {
+        tab.classList.add('bg-white', 'shadow-sm', 'text-primary');
+        tab.classList.remove('text-on-surface-variant');
+      } else {
+        tab.classList.remove('bg-white', 'shadow-sm', 'text-primary');
+        tab.classList.add('text-on-surface-variant');
+      }
+    });
+    renderAlloys();
+    calculate();
+  }
+
+  function renderAlloys() {
+    var alloys = ALLOYS[currentMetal];
+    alloyGrid.innerHTML = '';
+    alloys.forEach(function(alloy, index) {
+      var btn = document.createElement('button');
+      btn.className = 'alloy-btn border py-3 rounded-lg text-sm transition-all';
+      btn.textContent = alloy.label;
+      btn.dataset.purity = alloy.purity;
+
+      // Default selection: second item for gold, first for others
+      var defaultIndex = currentMetal === 'gold' ? 1 : 0;
+      if (index === defaultIndex) {
+        currentPurity = alloy.purity;
+        btn.classList.add('border-primary', 'text-primary', 'font-bold', 'bg-primary/5');
+      } else {
+        btn.classList.add('border-outline-variant/30', 'hover:border-primary', 'hover:text-primary');
+      }
+
+      btn.addEventListener('click', function() {
+        currentPurity = parseFloat(this.dataset.purity);
+        document.querySelectorAll('.alloy-btn').forEach(function(b) {
+          b.classList.remove('border-primary', 'text-primary', 'font-bold', 'bg-primary/5');
+          b.classList.add('border-outline-variant/30');
+        });
+        this.classList.remove('border-outline-variant/30');
+        this.classList.add('border-primary', 'text-primary', 'font-bold', 'bg-primary/5');
+        calculate();
+      });
+
+      alloyGrid.appendChild(btn);
+    });
+  }
+
+  function calculate() {
+    var weight = parseFloat(weightInput.value) || 0;
+    var pricePerGram = PRICES[currentMetal];
+    var result = weight * pricePerGram * currentPurity * FACTOR;
+    var formatted = result.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    calcResult.innerHTML = formatted + ' <span class="text-xl font-normal text-primary">\u20AC</span>';
+  }
+
+  metalTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      setActiveMetal(this.dataset.metal);
+    });
+  });
+
+  if (weightInput) {
+    weightInput.addEventListener('input', calculate);
+  }
+
+  // ==================
+  // FAQ Accordion
+  // ==================
+  var faqToggles = document.querySelectorAll('.faq-toggle');
+  faqToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var content = item.querySelector('.faq-content');
+      var icon = this.querySelector('.faq-icon');
+      var isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(function(fi) {
+        var fc = fi.querySelector('.faq-content');
+        var fi_icon = fi.querySelector('.faq-icon');
+        fc.style.maxHeight = '0px';
+        fc.style.opacity = '0';
+        fi_icon.style.transform = 'rotate(0deg)';
+        fi_icon.classList.remove('text-primary');
+        fi_icon.classList.add('text-stone-400');
+      });
+
+      // Open clicked if was closed
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        icon.style.transform = 'rotate(180deg)';
+        icon.classList.add('text-primary');
+        icon.classList.remove('text-stone-400');
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Über uns | GoldExpert24.de</title>
+<meta name="description" content="Lernen Sie das Team hinter GoldExpert24.de kennen. Transparenz, zertifizierte Messtechnik und echte Experten für Ihren Goldverkauf."/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-error": "#ffffff",
+          "on-surface": "#1c1b1b",
+          "on-surface-variant": "#4d4637",
+          "on-tertiary-container": "#4a3f19",
+          "error": "#ba1a1a",
+          "surface-container": "#f0eded",
+          "surface": "#fcf9f8",
+          "on-primary-container": "#503d00",
+          "on-error-container": "#93000a",
+          "tertiary-fixed": "#f5e1ae",
+          "background": "#fcf9f8",
+          "surface-variant": "#e5e2e1",
+          "on-primary-fixed": "#241a00",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-highest": "#e5e2e1",
+          "on-primary": "#ffffff",
+          "surface-container-high": "#eae7e7",
+          "primary": "#755b00",
+          "error-container": "#ffdad6",
+          "secondary": "#5e5e5e",
+          "primary-container": "#c9a84c",
+          "on-tertiary": "#ffffff",
+          "inverse-on-surface": "#f3f0ef",
+          "surface-dim": "#dcd9d9",
+          "inverse-primary": "#e6c364",
+          "secondary-fixed-dim": "#c8c6c6",
+          "surface-bright": "#fcf9f8",
+          "on-secondary": "#ffffff",
+          "surface-container-low": "#f6f3f2",
+          "primary-fixed-dim": "#e6c364",
+          "on-secondary-fixed-variant": "#474747",
+          "primary-fixed": "#ffe08f",
+          "tertiary-container": "#bbaa7b",
+          "secondary-fixed": "#e4e2e2",
+          "outline": "#7e7665",
+          "tertiary-fixed-dim": "#d8c594",
+          "on-secondary-container": "#646464",
+          "secondary-container": "#e4e2e2",
+          "on-secondary-fixed": "#1b1c1c",
+          "outline-variant": "#d0c5b2",
+          "inverse-surface": "#313030",
+          "tertiary": "#6b5d35",
+          "on-tertiary-fixed-variant": "#524620",
+          "on-primary-fixed-variant": "#584400",
+          "on-background": "#1c1b1b",
+          "surface-tint": "#755b00",
+          "on-tertiary-fixed": "#231b00"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        fontFamily: {
+          headline: ["Noto Serif"],
+          body: ["Manrope"],
+          label: ["Inter"],
+          mono: ["DM Mono"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  html { scroll-behavior: smooth; }
+  .gradient-gold { background: linear-gradient(45deg, #755b00 0%, #c9a84c 100%); }
+  @keyframes ping-dot {
+    0% { transform: scale(1); opacity: 1; }
+    75% { transform: scale(2.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+  .ping-ring {
+    animation: ping-dot 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- Navigation -->
+<nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm shadow-stone-200/10">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="block"><img src="assets/logo-dark.svg" alt="GoldExpert24.de" class="h-8"></a>
+    <!-- Mobile menu button -->
+    <button id="mobileMenuBtn" class="md:hidden flex items-center text-on-surface">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="index.html">Ankaufswerte</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="preise.html">Preise</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="ablauf.html">Ablauf</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="sicherheit.html">Sicherheit</a>
+      <a class="font-headline tracking-tight text-stone-600 hover:text-[#c9a84c] transition-colors duration-300" href="faq.html">FAQ</a>
+    </div>
+    <a href="#versandtasche" class="hidden md:inline-block bg-gradient-to-tr from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm hover:scale-95 duration-200 transition-transform">
+      Versandtasche bestellen
+    </a>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-outline-variant/20 bg-white/95 backdrop-blur-md">
+    <div class="flex flex-col px-6 py-4 gap-4">
+      <a class="font-headline tracking-tight text-stone-600" href="index.html">Ankaufswerte</a>
+      <a class="font-headline tracking-tight text-stone-600" href="preise.html">Preise</a>
+      <a class="font-headline tracking-tight text-stone-600" href="ablauf.html">Ablauf</a>
+      <a class="font-headline tracking-tight text-stone-600" href="sicherheit.html">Sicherheit</a>
+      <a class="font-headline tracking-tight text-stone-600" href="faq.html">FAQ</a>
+      <a href="#versandtasche" class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm text-center hover:scale-95 duration-200 transition-transform">
+        Versandtasche bestellen
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="px-6 md:px-8 pt-16 md:pt-24 pb-16 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <!-- Left column -->
+    <div class="lg:col-span-7">
+      <span class="font-label text-primary text-xs uppercase tracking-[0.2em] font-medium mb-4 block">Über Uns</span>
+      <h1 class="font-headline text-4xl md:text-5xl lg:text-7xl text-on-surface leading-[1.1] mb-6">
+        Transparenz ist<br/>unser Produkt.
+      </h1>
+      <p class="text-secondary text-base md:text-lg leading-relaxed max-w-xl mb-10">
+        Wir haben GoldExpert24 gegründet, weil der Goldankauf-Markt ein Vertrauensproblem hat.
+        Undurchsichtige Preise, versteckte Gebühren und fragwürdige Bewertungsmethoden sind die Norm.
+        Unser Ziel: Das ändern. Mit Labor-Analytik, Echtzeit-Kursen und einem Prozess, den Sie jederzeit nachvollziehen können.
+      </p>
+      <!-- Team avatars row -->
+      <div class="flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4-k4zHbhKEIDMcs92yqVYiWrzkXpI_i2aaLEo3MN6f2ayk8h1CE162WDyhOl4BZUftA9EEzqEy0x1DnrC1WyyPqGcesxxXR3VvmEK3PLy6FYnqPMaT5gduh_Mrw6tPbByvecx2pYb4y8m-is5V0VDHbyWhUtbJxJ45LA6U2YOKGhqpwX_85O9xx4QrZynsf6K-VwSRaCNqje7QnouFIz_Wk9D_CkqzlH2GVo06JPReyfFDYEB9vLEaJdN4o4v5Yu-7AZYtWpSb5w" alt="Teammitglied" class="w-10 h-10 rounded-full border-2 border-white object-cover"/>
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvxi5FCyriqHNrIoNAV5F81Jmo0l4p_sfTzFgdlRj6tFrq-deWMhWjYeX_nmkOdCCkskbhZEgPSs_6OIgTf_2xyZVtrmH50UksqubBG13PtEDNWK_En-tGwuu6ZQCKAzOLkNRM-8EzwxtPRwSzCYzf_aElWFK5YK_LBFevhrpN5J3JnTl0faBYZlgO7JZBsYW_QFwFMMjnj2ViI0HE6-2WS_NmnI2vHR7pZycQKtQbt-R8o_3lhFKr33X8p63tulM24BzUHaBfXlI" alt="Teammitglied" class="w-10 h-10 rounded-full border-2 border-white object-cover"/>
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADbrc3u51ogR7jfzYa7CCRaAthl6x5BFY-f76NE4-loSbBZEOpm0IO6Df4fnhCPjqr_xlIornHWfkPflXI5XHgxmSRVD1Le2lNPaDvVvH-hLSmaLPicBz-HWN4fyn-v8ghUQFc9sIqsgstlKonWI7mddU81BXqe8bAkw2Fd6zq5e88XHEVhH60qk_xXvOKjYkcPhHlH67JFfzgnfkSOdCqFTjn9yBQFBOhs5ZASo7oTMasccG56CchkhbWaXdHS1Jrd_Vg6fGfHjA" alt="Teammitglied" class="w-10 h-10 rounded-full border-2 border-white object-cover"/>
+        </div>
+        <p class="text-secondary text-sm">15+ Experten arbeiten täglich an Ihrer Sicherheit.</p>
+      </div>
+    </div>
+    <!-- Right column -->
+    <div class="lg:col-span-5 relative">
+      <div class="bg-surface-container-low rounded-xl p-3 shadow-2xl transform rotate-2">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnX3PowUP3poBb6FAALwcheX4IS0PGNM_kpWKz86tAOxqgGND-pwznfIF_OuPtMaC9gnmpfWWuJieOJi6cY6flHDUOShifrSAUTp_gMGOJnAiE90kP8OMDmcw5cgNCYm_oVK1Az7LFExLmLgFmcQeoFZG_EUqvuutmJ1oD9sGyIPIlaqLH5gRyZNUUhInHjRLehT224VlsTACIwu5iaU_7gS4dSMUBqZj_xkOocZQSy_n2TSFteoihl_AHD4erY-eTrwtl99Xsgc" alt="GoldExpert24 Labor" class="w-full rounded-lg object-cover aspect-[4/5]"/>
+      </div>
+      <!-- Floating glass card -->
+      <div class="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md rounded-xl shadow-lg px-5 py-4 border border-outline-variant/20">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
+          <div>
+            <p class="font-mono text-primary font-medium text-sm tracking-wide">PRECISION 0.01g</p>
+            <p class="text-secondary text-xs">Zertifizierte Messtechnik</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Statement -->
+<section class="bg-surface-container-low">
+  <div class="px-6 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <!-- Left: Text -->
+      <div>
+        <h2 class="font-headline text-3xl md:text-4xl text-on-surface leading-tight mb-8">
+          Warum wir tun,<br/>was wir tun.
+        </h2>
+        <p class="text-secondary leading-relaxed mb-6">
+          Der Edelmetallmarkt ist einer der ältesten Märkte der Welt — und gleichzeitig einer der intransparentesten.
+          Privatverkäufer erhalten oft weit unter dem tatsächlichen Materialwert, weil ihnen die Werkzeuge fehlen, den
+          Wert ihres Goldes selbst einzuschätzen.
+        </p>
+        <p class="text-secondary leading-relaxed mb-6">
+          Wir haben GoldExpert24 gegründet, um diese Asymmetrie aufzulösen. Jedes Stück wird in unserem eigenen
+          Labor analysiert — mit Röntgenfluoreszenz-Technologie, die den Feingehalt auf 0,01% genau bestimmt.
+          Der aktuelle Goldkurs wird in Echtzeit eingespeist. Keine Schätzungen, keine Pauschalabzüge.
+        </p>
+        <p class="text-secondary leading-relaxed">
+          Das Ergebnis: Ein Ankaufspreis, den Sie nachvollziehen können. Und ein Prozess, bei dem Sie
+          zu jedem Zeitpunkt wissen, was passiert.
+        </p>
+      </div>
+      <!-- Right: Stat cards 2x2 -->
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/10">
+          <p class="font-mono text-primary text-3xl md:text-4xl font-medium mb-2">99.9%</p>
+          <p class="text-secondary text-sm">Kundenzufriedenheit</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/10 mt-8">
+          <p class="font-mono text-primary text-3xl md:text-4xl font-medium mb-2">24h</p>
+          <p class="text-secondary text-sm">Auszahlungsziel</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/10">
+          <p class="font-mono text-primary text-3xl md:text-4xl font-medium mb-2">0&euro;</p>
+          <p class="text-secondary text-sm">Versandkosten</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/10 mt-8">
+          <p class="font-mono text-primary text-3xl md:text-4xl font-medium mb-2">RFA</p>
+          <p class="text-secondary text-sm">Labor-Analyse</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lab Gallery -->
+<section class="px-6 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-label font-medium uppercase tracking-wider">
+      <span class="material-symbols-outlined text-sm">shield</span>
+      Hochsicherheitslager
+    </span>
+  </div>
+  <h2 class="font-headline text-3xl md:text-4xl text-on-surface leading-tight mb-10">
+    Ein Blick in unser Labor.
+  </h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" style="height: auto;">
+    <!-- Main image: 2 cols + 2 rows -->
+    <div class="col-span-2 row-span-2 relative overflow-hidden rounded-xl group cursor-pointer" style="min-height: 400px;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_C3V5qLLaHC1NYqhsGuEIPojN4gp87SwVeMyK8ZLWaXbMKt5SlXIRM0ydzFkJl1SPB1aY4ej9MXDp6_Ym9LbAhSZFoRyThVLaYr6ye93uUc8Fe1DPdNoGoGlc-9DCnLoBOprXTnAdPfldzra2rn5t1WVCT4Me_K4Mx5L3g-XG9XJVbtx_OuhBG8T-Fn-4-wxah7sWRCPjOE-_P_fFU79rz-gNtLnmU1HyP4qiBwsnpSMA4p_sNZoM1ZVufUbaEU22PU1xGzNFI8U" alt="RFA Labor-Analyse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+        <p class="text-white font-medium text-sm">Röntgenfluoreszenz-Analyse in Echtzeit</p>
+      </div>
+    </div>
+    <!-- Office image: 2 cols -->
+    <div class="col-span-2 relative overflow-hidden rounded-xl group cursor-pointer" style="min-height: 195px;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJDGnJaAr59z8AowY0x_MCuf5_jdpEp9x40hh2XxJ6TmU4vaOhajUbDiwvzRofrEnsN7Kor0bUoWLkL5zgVv6hp2Fm0z4jEaUihQ5-56ARj11oWOTA91MRlcNK8Hvuazp-IMqHazxPqP2YL23bmcLPXg1M9eS6gztPt645-nNea-lf9Qsi0TEzjNIKVN2OiLS9WxJwKmLk39a7ucRJ_DYXeyW134hSiP2Ek9vK-rs3sBfoM3iHsbkSo9tcS7t4klC27jOEr-sKhM" alt="Büro GoldExpert24" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+        <p class="text-white font-medium text-sm">Unsere Zentrale in München</p>
+      </div>
+    </div>
+    <!-- Gold bars -->
+    <div class="col-span-1 relative overflow-hidden rounded-xl group cursor-pointer" style="min-height: 195px;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_8u9ZXGCEsATrpLZ7CXJ3REV2pk6dXYLqTdrFZIe-NaibxL-E3AEjD-VgecEtjfO3Ewe8r0W4APGqgklDbsXxvgGtMetUsmD3JEKNmFKnfOTwf5Ef1FaxevbkeDsYvE95vGvyevlzqhdLcAOPzPcbmC3U7NPQBSJiqYuuHBAXf-4IH1Rjwzrp_qk0zHmOviX1gJagZ3xCLdNCIl9498OyoWnOauC3LFFFQJY7GAM1qjGm_30s1ScynjiYcqzj_NiIzjMEM2C4vM" alt="Goldbarren" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+        <p class="text-white font-medium text-xs">Zertifizierte Barren</p>
+      </div>
+    </div>
+    <!-- Lab tools -->
+    <div class="col-span-1 relative overflow-hidden rounded-xl group cursor-pointer" style="min-height: 195px;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxfCRQGaURxwhXLtKk2A-JudZ4VH10dcAHZwf5hjRz9q5MXwhrIDAej6BFMMiLZtBbNqBlyKrYYpU9cWhBfTf5M_2FVNLFCWwAGQWC6fml0-b4exrV1mtzc39KP-xR4jRfc8xJzDdCZ34iuS4B2qjSEtMm6iWgPXP6C7jhIEmTB_KnEZUEHMclnT5TKs9QqF1PoWczl1xufAH_REGRBZwI4Ho-u6yFxGsWpdBuonkeLewHgIUBgfmLVKwvukaK_PIejzPizG-S7R8" alt="Labor-Werkzeuge" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+        <p class="text-white font-medium text-xs">Präzisionsinstrumente</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="bg-surface-container-low">
+  <div class="px-6 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl text-on-surface leading-tight mb-4">
+      Hinter GoldExpert24 stecken<br class="hidden md:block"/> echte Menschen.
+    </h2>
+    <p class="text-secondary text-base mb-14 max-w-2xl">
+      Unser Führungsteam vereint Jahrzehnte an Erfahrung in Edelmetallanalytik, Logistik und Finanzdienstleistungen.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Thomas Weber -->
+      <div class="group">
+        <div class="overflow-hidden rounded-xl mb-5">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt4MpX2YDvtzzCJ6JFDSsoSBj_bod_-Dnhy0SSTKt_m8IVax0cS9Qiq0pbw1s_1FT0sWsuOl0eSY43rOjWkAHRvviGJnx6CEvrGXHy0wpvMNAesfY_RVKJBBKggME0HuVx6pYiHE6YDgi3wvL2dt-OWqKwes5vxOhWwUBsrv6SfdRawPYm9uVfZbI36NGWSN0HhoXjQJTSvB1xrDtAOFei8Hke7IJqlEK0a6KmnrXwsL4RMnv0uiHiSg4wHGOrO6EIvoQkLP0GfiI" alt="Thomas Weber" class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105"/>
+        </div>
+        <h3 class="font-headline text-lg text-on-surface font-bold">Thomas Weber</h3>
+        <p class="font-label text-primary text-xs uppercase tracking-[0.15em] font-medium mb-3">Gründer & Geschäftsführer</p>
+        <p class="text-secondary text-sm leading-relaxed">
+          20 Jahre Erfahrung im Edelmetallhandel. Ehemals leitender Analyst bei einer Schweizer Privatbank.
+          Gründete GoldExpert24 mit der Vision, den Goldankauf für Privatpersonen fair und transparent zu gestalten.
+        </p>
+      </div>
+      <!-- Dr. Elena Kostic -->
+      <div class="group">
+        <div class="overflow-hidden rounded-xl mb-5">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD0zaFRIfcNhNd6dKCyxmJqBvkiNhcnmfiaUWUBG_ZQYQtm1TfcREuXA22iV7V20sCBsqYy1Q2KPgAB10BdU89JXju2kXs09uzWEAVHquhZUigsub6IUfQl-rnGi1An_HJr7-oVgA6ms4fvg3yRgELDuf3ItjCVDkVJdvAYQ9n0a8neGyD4KmPIHMRnszJAlYfI_BOA7XEcmVQRqoAi5YGTddpuMTLRwWqTtle49cCYL8IcpGvGlBBZTYb0y9B-MLKBP9FOxfVjYQ" alt="Dr. Elena Kostic" class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105"/>
+        </div>
+        <h3 class="font-headline text-lg text-on-surface font-bold">Dr. Elena Kostic</h3>
+        <p class="font-label text-primary text-xs uppercase tracking-[0.15em] font-medium mb-3">Leiterin Analytik</p>
+        <p class="text-secondary text-sm leading-relaxed">
+          Promovierte Materialwissenschaftlerin mit Spezialisierung auf Röntgenfluoreszenzanalyse.
+          Verantwortlich für die Kalibrierung und Qualitätssicherung unserer gesamten Messtechnik.
+        </p>
+      </div>
+      <!-- Marc Sonnenberg -->
+      <div class="group">
+        <div class="overflow-hidden rounded-xl mb-5">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvXOqh5McSrQ7yKXUsRksDEyDvzRz227166jRfIpmYtrlLYTrd3XpSvWuigo7NokpnWf3Ai4KY515hJTissayoBLfl5Oh5SNUwFUR-gn73shYfTx4t2OzouNxA0otLluGKQhPFKEiF83GHFJNrn_QMQycHw5vaeN6_RtiPU_VAcD83C_MOwYjDI-MQJ9bBc73VTh6DyUcbJAHhdj43tcsYSSBz2078t0hDdbgRmlW2v_6Q1FS84kBkqTp2AY5rfDYxz9nPm0bPNEk" alt="Marc Sonnenberg" class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105"/>
+        </div>
+        <h3 class="font-headline text-lg text-on-surface font-bold">Marc Sonnenberg</h3>
+        <p class="font-label text-primary text-xs uppercase tracking-[0.15em] font-medium mb-3">Leiter Logistik & Sicherheit</p>
+        <p class="text-secondary text-sm leading-relaxed">
+          Ehemaliger Sicherheitsberater für Werttransportunternehmen. Entwickelte das versicherte Versandsystem
+          von GoldExpert24 mit lückenloser Sendungsverfolgung und Versicherungsschutz bis 500.000 Euro.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance Badges -->
+<section class="px-6 md:px-8 py-16 md:py-20 max-w-7xl mx-auto">
+  <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+    <div class="flex flex-col items-center gap-3 group cursor-default">
+      <div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+        <span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+      </div>
+      <p class="text-secondary text-xs font-label font-medium text-center">GwG Konform</p>
+    </div>
+    <div class="flex flex-col items-center gap-3 group cursor-default">
+      <div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+        <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+      </div>
+      <p class="text-secondary text-xs font-label font-medium text-center">Handelsregister B</p>
+    </div>
+    <div class="flex flex-col items-center gap-3 group cursor-default">
+      <div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+        <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+      </div>
+      <p class="text-secondary text-xs font-label font-medium text-center">Bankgeprüft</p>
+    </div>
+    <div class="flex flex-col items-center gap-3 group cursor-default">
+      <div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+        <span class="material-symbols-outlined text-primary text-3xl">monitoring</span>
+      </div>
+      <p class="text-secondary text-xs font-label font-medium text-center">Echtzeit-Kurse</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="px-6 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <!-- Left: Contact details -->
+    <div>
+      <h2 class="font-headline text-3xl md:text-4xl text-on-surface leading-tight mb-8">
+        Kontaktieren Sie uns.
+      </h2>
+      <p class="text-secondary leading-relaxed mb-10">
+        Haben Sie Fragen zu unserem Ankaufsprozess oder möchten Sie ein persönliches Angebot?
+        Unser Team ist für Sie da — telefonisch, per E-Mail oder vor Ort.
+      </p>
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+          </div>
+          <div>
+            <p class="text-on-surface font-medium mb-1">Zentrale München</p>
+            <p class="text-secondary text-sm">Maximilianstraße 12<br/>80539 München</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-primary text-xl">call</span>
+          </div>
+          <div>
+            <p class="text-on-surface font-medium mb-1">Telefon</p>
+            <p class="text-secondary text-sm">+49 (0) 89 123 456 789</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-primary text-xl">mail</span>
+          </div>
+          <div>
+            <p class="text-on-surface font-medium mb-1">E-Mail</p>
+            <p class="text-secondary text-sm">info@goldexpert24.de</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Map -->
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk-yYMwutFoCvF3MKVP8k79GmA67ekSNb8XZCN5Gn1pYPBzW3aSPygMbloV-ZNerk2hXL-KiGkvP-ZRICeSk_h5WFsggHL4jv8gCYrFFdNCD76dV7EIElqr0TBEIzhCrB5ffjgbOzoExjCP1Yi3R2e5_R8YGXVanq3pHnE4aKzAii2H8PrLTsDtEof-_SNuDktxRRsbK-p1W0EPhq5R1dczUkqiJOOM9IOUxMlU818UXx96oCjJedMOz9LrAy1UU8xeHn2OvSfGd8" alt="Standort München" class="w-full aspect-[4/3] object-cover"/>
+      <!-- Animated ping marker -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative">
+          <div class="w-4 h-4 bg-primary rounded-full border-2 border-white shadow-md relative z-10"></div>
+          <div class="absolute top-0 left-0 w-4 h-4 bg-primary rounded-full ping-ring"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-stone-950 w-full pt-16 pb-8">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <div class="col-span-1">
+      <div class="mb-6"><img src="assets/logo-white.svg" alt="GoldExpert24.de" class="h-8"></div>
+      <p class="font-headline text-stone-300 text-sm leading-relaxed mb-6">
+        Ihr vertrauensvoller Partner für den Ankauf von Edelmetallen. Sicher, diskret und zum tagesaktuellen Bestpreis.
+      </p>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">public</span>
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">share</span>
+        <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">mail</span>
+      </div>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+      <ul class="space-y-4">
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="index.html">Ankaufswerte</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="preise.html">Preise</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="ablauf.html">Ablauf</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="sicherheit.html">Sicherheit</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Rechtliches</h4>
+      <ul class="space-y-4">
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Impressum</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Datenschutz</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">AGB</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Widerrufsbelehrung</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1">
+      <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Kontakt</h4>
+      <ul class="space-y-4 text-stone-300 text-sm">
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">call</span>
+          +49 (0) 89 123 456 789
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">mail</span>
+          info@goldexpert24.de
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[#c9a84c] text-sm">location_on</span>
+          Zentrale München
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-8 mt-16 pt-8 border-t border-white/5 text-center">
+    <p class="font-headline text-stone-500 text-xs">&copy; 2026 GoldExpert24.de &ndash; Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  // Mobile menu toggle
+  var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      var icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+      icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+  }
+})();
+</script>
+</body>
+</html>

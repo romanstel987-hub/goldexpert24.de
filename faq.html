@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ – GoldExpert24.de</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff", "on-surface": "#1c1b1b", "on-surface-variant": "#4d4637",
+            "error": "#ba1a1a", "surface-container": "#f0eded", "surface": "#fcf9f8",
+            "background": "#fcf9f8", "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e5e2e1", "on-primary": "#ffffff",
+            "surface-container-high": "#eae7e7", "primary": "#755b00",
+            "secondary": "#5e5e5e", "primary-container": "#c9a84c",
+            "surface-dim": "#dcd9d9", "surface-bright": "#fcf9f8",
+            "surface-container-low": "#f6f3f2", "outline": "#7e7665",
+            "outline-variant": "#d0c5b2", "on-background": "#1c1b1b",
+          },
+          borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+          fontFamily: { headline: ["Noto Serif"], body: ["Manrope"], label: ["Inter"], mono: ["DM Mono"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Manrope', sans-serif; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="block"><img src="assets/logo-dark.svg" alt="GoldExpert24.de" class="h-8"></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-body font-medium text-secondary hover:text-primary transition-colors">Ankaufswerte</a>
+          <a href="preise.html" class="text-sm font-body font-medium text-secondary hover:text-primary transition-colors">Preise</a>
+          <a href="ablauf.html" class="text-sm font-body font-medium text-secondary hover:text-primary transition-colors">Ablauf</a>
+          <a href="sicherheit.html" class="text-sm font-body font-medium text-secondary hover:text-primary transition-colors">Sicherheit</a>
+          <a href="faq.html" class="text-sm font-body font-medium text-primary border-b-2 border-primary pb-0.5">FAQ</a>
+        </div>
+        <a href="#" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-body font-semibold text-on-primary rounded-full" style="background: linear-gradient(45deg, #755b00, #c9a84c);">
+          Versandtasche bestellen
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2">
+          <span class="material-symbols-outlined text-on-surface">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant/30 bg-white/95 backdrop-blur-md">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-sm font-body text-secondary">Ankaufswerte</a>
+        <a href="preise.html" class="block py-2 text-sm font-body text-secondary">Preise</a>
+        <a href="ablauf.html" class="block py-2 text-sm font-body text-secondary">Ablauf</a>
+        <a href="sicherheit.html" class="block py-2 text-sm font-body text-secondary">Sicherheit</a>
+        <a href="faq.html" class="block py-2 text-sm font-body font-semibold text-primary">FAQ</a>
+        <a href="#" class="block w-full text-center py-2.5 text-sm font-body font-semibold text-on-primary rounded-full mt-2" style="background: linear-gradient(45deg, #755b00, #c9a84c);">Versandtasche bestellen</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-surface-container-low py-20 lg:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-headline text-4xl sm:text-5xl font-bold text-on-surface leading-tight">Häufig gestellte Fragen</h1>
+        <p class="mt-6 text-lg font-body text-secondary max-w-2xl mx-auto">Alles was Sie über den Goldankauf bei GoldExpert24 wissen müssen.</p>
+      </div>
+    </section>
+
+    <!-- Category Filter + FAQ Accordion -->
+    <section class="py-16 lg:py-20 bg-surface">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2 mb-10 justify-center">
+          <button class="faq-filter active px-5 py-2 text-sm font-label font-medium rounded-full border transition-all" data-category="alle" style="background: linear-gradient(45deg, #755b00, #c9a84c); color: #fff; border-color: transparent;">Alle</button>
+          <button class="faq-filter px-5 py-2 text-sm font-label font-medium rounded-full border border-outline-variant/40 text-secondary bg-surface-container-lowest hover:border-primary hover:text-primary transition-all" data-category="versand">Versand</button>
+          <button class="faq-filter px-5 py-2 text-sm font-label font-medium rounded-full border border-outline-variant/40 text-secondary bg-surface-container-lowest hover:border-primary hover:text-primary transition-all" data-category="bewertung">Bewertung</button>
+          <button class="faq-filter px-5 py-2 text-sm font-label font-medium rounded-full border border-outline-variant/40 text-secondary bg-surface-container-lowest hover:border-primary hover:text-primary transition-all" data-category="auszahlung">Auszahlung</button>
+          <button class="faq-filter px-5 py-2 text-sm font-label font-medium rounded-full border border-outline-variant/40 text-secondary bg-surface-container-lowest hover:border-primary hover:text-primary transition-all" data-category="sicherheit">Sicherheit</button>
+        </div>
+
+        <!-- FAQ Items -->
+        <div id="faq-list" class="space-y-3">
+
+          <!-- Versand -->
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="versand">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Versand</span>
+                <h3 class="font-body font-semibold text-on-surface">Wie bestelle ich eine Versandtasche?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-0 border-t border-outline-variant/20 mt-0 pt-4">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Die Bestellung ist ganz einfach: Fordern Sie Ihre kostenlose Versandtasche über unsere Website oder telefonisch unter 0800 123 456 78 an. Die Tasche wird Ihnen innerhalb von 1-2 Werktagen per Post zugestellt. Sie enthält alles, was Sie für den sicheren Versand benötigen: eine gepolsterte Versandtasche mit Sicherheitssiegel, einen vorfrankierten Rücksendeaufkleber und eine Anleitung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="versand">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Versand</span>
+                <h3 class="font-body font-semibold text-on-surface">Ist der Versand wirklich kostenlos und versichert?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Ja, der Versand ist für Sie vollkommen kostenlos. Im Standard ist Ihre Sendung bis 2.500 &euro; versichert. Für höhere Werte bieten wir einen speziellen Werttransport bis 25.000 &euro; sowie einen Premium-Kurier-Service bis 50.000 &euro; an. Auch eine eventuelle Rücksendung ist kostenlos und vollversichert. Es entstehen Ihnen zu keinem Zeitpunkt Kosten.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="versand">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Versand</span>
+                <h3 class="font-body font-semibold text-on-surface">Kann ich auch persönlich vorbeikommen?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Ja, Sie können uns gerne persönlich in München besuchen. Bitte vereinbaren Sie vorab einen Termin unter 0800 123 456 78 oder per E-Mail an info@goldexpert24.de. So stellen wir sicher, dass ein Experte für Sie bereitsteht und Ihre Bewertung sofort durchgeführt werden kann. Die Bewertung und Auszahlung erfolgen dann direkt vor Ort.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bewertung -->
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="bewertung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Bewertung</span>
+                <h3 class="font-body font-semibold text-on-surface">Wie wird mein Gold bewertet?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Wir verwenden die Röntgenfluoreszenzanalyse (RFA), ein zerstörungsfreies Verfahren, das den genauen Goldgehalt bestimmt. Die gesamte Bewertung wird unter Videoaufzeichnung durchgeführt, die Ihnen auf Wunsch zur Verfügung gestellt wird. Zusätzlich wird das Gewicht auf einer geeichten Präzisionswaage ermittelt. Auf Basis des aktuellen Goldkurses erhalten Sie dann unser Angebot.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="bewertung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Bewertung</span>
+                <h3 class="font-body font-semibold text-on-surface">Welche Goldlegierungen kaufen Sie an?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Wir kaufen alle gängigen Goldlegierungen an: 333er (8 Karat), 375er (9 Karat), 585er (14 Karat), 750er (18 Karat), 900er (21,6 Karat), 916er (22 Karat) und 999er (24 Karat) Feingold. Wir nehmen Schmuck, Barren, Münzen, Zahngold, Bruchgold und Altgold an. Auch Silber und Platin kaufen wir an.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="bewertung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Bewertung</span>
+                <h3 class="font-body font-semibold text-on-surface">Wie aktuell sind Ihre Preise?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Unsere Ankaufspreise sind an den Echtzeit-Goldkurs gebunden und werden alle 60 Sekunden automatisch aktualisiert. Sie sehen auf unserer Preisseite immer den tagesaktuellen Kurs. Der endgültige Ankaufspreis wird zum Zeitpunkt der Bewertung auf Basis des dann geltenden Kurses berechnet und Ihnen vorab mitgeteilt.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Auszahlung -->
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="auszahlung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Auszahlung</span>
+                <h3 class="font-body font-semibold text-on-surface">Wie schnell erhalte ich mein Geld?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Nach Ihrer Zustimmung zum Angebot überweisen wir den Betrag innerhalb von 24 Stunden auf Ihr Konto. Bei SEPA Instant ist das Geld in der Regel innerhalb von Sekunden verfügbar. Standard-SEPA-Überweisungen dauern 1-2 Werktage. Sie erhalten eine Bestätigung per E-Mail, sobald die Überweisung veranlasst wurde.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="auszahlung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Auszahlung</span>
+                <h3 class="font-body font-semibold text-on-surface">Welche Zahlungsarten bieten Sie an?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Wir bieten Ihnen folgende Zahlungsarten an: Standard-SEPA-Banküberweisung (1-2 Werktage), SEPA Instant (Gutschrift in Sekunden, wenn Ihre Bank dies unterstützt) und auf Wunsch auch Verrechnungsscheck. Barauszahlung ist nur bei persönlichem Besuch in München möglich. Die gängigste und schnellste Methode ist SEPA Instant.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="auszahlung">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Auszahlung</span>
+                <h3 class="font-body font-semibold text-on-surface">Was passiert, wenn ich das Angebot ablehne?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Kein Problem! Wenn Sie unser Angebot nicht annehmen möchten, senden wir Ihnen Ihr Gold kostenlos und vollversichert zurück. Es entstehen Ihnen keinerlei Kosten. Sie haben 14 Tage Bedenkzeit nach Erhalt unseres Angebots. Ihr Eigentum bleibt jederzeit Ihr Eigentum, bis Sie dem Verkauf ausdrücklich zustimmen. Die Rücksendung erfolgt innerhalb von 24 Stunden.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sicherheit -->
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="sicherheit">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Sicherheit</span>
+                <h3 class="font-body font-semibold text-on-surface">Wie schützen Sie meine Daten?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Datenschutz hat bei uns höchste Priorität. Alle Daten werden DSGVO-konform verarbeitet und auf Servern in Deutschland gespeichert. Unsere Website und alle Kommunikationskanäle sind mit SSL/TLS Ende-zu-Ende verschlüsselt. Wir geben Ihre Daten niemals an Dritte weiter und verwenden sie ausschließlich für die Abwicklung Ihres Ankaufs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden" data-category="sicherheit">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left">
+              <div class="flex items-center gap-3 pr-4">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-medium text-primary bg-primary/10 rounded-full">Sicherheit</span>
+                <h3 class="font-body font-semibold text-on-surface">Sind Sie ein seriöses Unternehmen?</h3>
+              </div>
+              <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0">expand_more</span>
+            </button>
+            <div class="faq-answer px-5">
+              <div class="pb-5 pt-4 border-t border-outline-variant/20">
+                <p class="text-sm font-body text-secondary leading-relaxed">
+                  Ja, GoldExpert24 ist ein im Handelsregister B eingetragenes Unternehmen mit Sitz in München. Wir sind GwG-konform (Geldwäschegesetz), bei der BaFin registriert und nach ISO 27001 für Informationssicherheit zertifiziert. Seit über 15 Jahren vertrauen uns tausende Kunden ihre Edelmetalle an. Transparenz, faire Preise und höchste Sicherheitsstandards sind unser Fundament.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 lg:py-20 bg-surface-container-low border-t border-outline-variant/20">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 mx-auto mb-6">
+          <span class="material-symbols-outlined text-primary text-3xl">help</span>
+        </div>
+        <h2 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface mb-3">Ihre Frage war nicht dabei?</h2>
+        <p class="text-secondary font-body mb-8">Unser Kundenservice-Team hilft Ihnen gerne weiter. Wir antworten innerhalb von 2 Stunden.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <a href="tel:08001234567" class="inline-flex items-center gap-2 px-6 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-full text-sm font-body font-semibold text-on-surface hover:border-primary hover:text-primary transition-all">
+            <span class="material-symbols-outlined text-lg">call</span>
+            0800 123 456 78
+          </a>
+          <a href="mailto:info@goldexpert24.de" class="inline-flex items-center gap-2 px-6 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-full text-sm font-body font-semibold text-on-surface hover:border-primary hover:text-primary transition-all">
+            <span class="material-symbols-outlined text-lg">mail</span>
+            info@goldexpert24.de
+          </a>
+        </div>
+        <a href="#kontakt" class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-body font-semibold text-on-primary rounded-full shadow-lg hover:shadow-xl transition-all" style="background: linear-gradient(45deg, #755b00, #c9a84c);">
+          <span class="material-symbols-outlined text-xl">edit</span>
+          Kontaktformular öffnen
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-950 text-stone-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="block"><img src="assets/logo-white.svg" alt="GoldExpert24.de" class="h-8"></a>
+          <p class="mt-4 text-sm font-body text-stone-500 leading-relaxed">Ihr vertrauenswürdiger Partner für den Ankauf von Gold, Silber und Edelmetallen. Faire Preise, sichere Abwicklung.</p>
+        </div>
+        <!-- Navigation -->
+        <div>
+          <h4 class="font-label font-medium text-stone-300 text-sm mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Ankaufswerte</a></li>
+            <li><a href="preise.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Preise</a></li>
+            <li><a href="ablauf.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Ablauf</a></li>
+            <li><a href="sicherheit.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Sicherheit</a></li>
+            <li><a href="faq.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- Rechtliches -->
+        <div>
+          <h4 class="font-label font-medium text-stone-300 text-sm mb-4">Rechtliches</h4>
+          <ul class="space-y-2">
+            <li><a href="impressum.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Impressum</a></li>
+            <li><a href="datenschutz.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Datenschutz</a></li>
+            <li><a href="agb.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">AGB</a></li>
+            <li><a href="widerruf.html" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">Widerrufsbelehrung</a></li>
+          </ul>
+        </div>
+        <!-- Kontakt -->
+        <div>
+          <h4 class="font-label font-medium text-stone-300 text-sm mb-4">Kontakt</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary-container text-lg">call</span>
+              <a href="tel:08001234567" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">0800 123 456 78</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary-container text-lg">mail</span>
+              <a href="mailto:info@goldexpert24.de" class="text-sm font-body text-stone-500 hover:text-primary-container transition-colors">info@goldexpert24.de</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary-container text-lg">location_on</span>
+              <span class="text-sm font-body text-stone-500">München</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-stone-800 pt-8 text-center">
+        <p class="text-xs font-body text-stone-600">&copy; 2024 GoldExpert24.de. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // FAQ Accordion - only one open at a time
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      trigger.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        faqItems.forEach(other => {
+          other.classList.remove('active');
+          other.querySelector('.faq-answer').classList.remove('open');
+        });
+
+        // Open clicked (if it wasn't already open)
+        if (!isActive) {
+          item.classList.add('active');
+          item.querySelector('.faq-answer').classList.add('open');
+        }
+      });
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.faq-filter');
+    const gradientStyle = 'background: linear-gradient(45deg, #755b00, #c9a84c); color: #fff; border-color: transparent;';
+    const defaultStyle = 'background: ; color: ; border-color: ;';
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+
+        // Update button styles
+        filterBtns.forEach(b => {
+          b.style.cssText = '';
+          b.classList.remove('active');
+          b.classList.add('text-secondary', 'bg-surface-container-lowest');
+        });
+        btn.style.cssText = gradientStyle;
+        btn.classList.add('active');
+        btn.classList.remove('text-secondary', 'bg-surface-container-lowest');
+
+        // Close all open answers
+        faqItems.forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-answer').classList.remove('open');
+        });
+
+        // Show/hide items
+        faqItems.forEach(item => {
+          if (category === 'alle' || item.dataset.category === category) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
