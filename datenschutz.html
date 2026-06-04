@@ -6,8 +6,7 @@
 <title>Datenschutzerklärung – GoldExpert24.de</title>
 <meta name="description" content="Datenschutzerklärung von GoldExpert24.de nach DSGVO: Hosting, Server-Logs, Kontaktformular, externe Dienste, Betroffenenrechte."/>
 <meta name="robots" content="index,follow"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/fonts.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
   tailwind.config = {
@@ -122,22 +121,27 @@
     Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
   </p>
 
-  <h2>7. Externe Schriftarten &amp; Tailwind (CDN)</h2>
+  <h2>7. Schriftarten &amp; Tailwind CSS</h2>
   <p>
-    Zur einheitlichen Darstellung binden wir Schriftarten („Google Fonts", „Material Symbols") sowie das
-    CSS-Framework Tailwind über Content-Delivery-Networks (Google LLC bzw. jsDelivr) ein. Beim Seitenaufruf
-    baut Ihr Browser eine Verbindung zu den Servern dieser Anbieter auf, wobei Ihre IP-Adresse übermittelt
-    wird; dabei kann eine Übermittlung in die USA erfolgen. Rechtsgrundlage ist unser berechtigtes Interesse
-    an einer ansprechenden und konsistenten Darstellung (Art. 6 Abs. 1 lit. f DSGVO). Eine lokale Einbindung
-    der Schriftarten ist vorgesehen; bis dahin gilt dieser Hinweis.
+    Die verwendeten Schriftarten (Noto Serif, Manrope, DM Mono, Inter, Material Symbols) werden
+    <strong>lokal von unserem Server</strong> ausgeliefert. Es findet hierbei <strong>keine</strong> Verbindung
+    zu Google-Servern und keine Übermittlung Ihrer IP-Adresse an Dritte statt.
+  </p>
+  <p>
+    Für das Layout binden wir das CSS-Framework Tailwind CSS über ein Content-Delivery-Network ein. Beim
+    Seitenaufruf baut Ihr Browser eine Verbindung zum Server dieses Anbieters auf, wobei Ihre IP-Adresse
+    übermittelt wird; dabei kann eine Übermittlung in die USA erfolgen. Rechtsgrundlage ist unser
+    berechtigtes Interesse an einer konsistenten Darstellung (Art. 6 Abs. 1 lit. f DSGVO).
   </p>
 
-  <h2>8. Live-Edelmetallkurse (GoldAPI.io)</h2>
+  <h2>8. Live-Edelmetallkurse</h2>
   <p>
-    Der Goldrechner zeigt tagesaktuelle Edelmetallkurse. Der Kursabruf erfolgt von Ihrem Browser aus bei
-    GoldAPI.io; dabei wird technisch bedingt Ihre IP-Adresse an den Anbieter übermittelt. Es werden hierbei
-    <strong>keine</strong> von Ihnen eingegebenen personenbezogenen Daten (z. B. Gewicht, Name) übertragen.
-    Rechtsgrundlage ist unser berechtigtes Interesse an der Anzeige aktueller Kurse (Art. 6 Abs. 1 lit. f DSGVO).
+    Der Goldrechner zeigt tagesaktuelle Edelmetallkurse. Der Kursabruf erfolgt von Ihrem Browser aus bei den
+    externen Diensten gold-api.com (Edelmetall-Spotpreise) und frankfurter.dev (Wechselkurs USD/EUR auf Basis
+    der Europäischen Zentralbank); dabei wird technisch bedingt Ihre IP-Adresse an diese Anbieter übermittelt.
+    Es werden hierbei <strong>keine</strong> von Ihnen eingegebenen personenbezogenen Daten (z. B. Gewicht, Name)
+    übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an der Anzeige aktueller Kurse
+    (Art. 6 Abs. 1 lit. f DSGVO).
   </p>
 
   <h2>9. Cookies &amp; lokale Speicherung</h2>
@@ -188,6 +192,7 @@
       <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Rechtliches</h4>
       <ul class="space-y-4">
         <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="impressum.html">Impressum</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="agb.html">AGB</a></li>
         <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a></li>
         <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="cookies.html">Cookie-Einstellungen</a></li>
         <li class="font-headline text-stone-600 text-xs leading-relaxed pt-2">Beim Ankauf von Privatpersonen besteht kein gesetzliches Widerrufsrecht.</li>

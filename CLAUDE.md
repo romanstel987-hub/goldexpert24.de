@@ -35,9 +35,13 @@ Betreiber: **KoschkaWeb Technologies (Roman Stel)**, Sulzbach-Rosenberg.
 
 ## Live-Kurse (Goldrechner)
 
-- GoldAPI.io (`XAU/XAG/XPT` in EUR), Header `x-access-token`. **CORS ist offen** (Client-Fetch ok).
-- API-Key-Platzhalter `GOLDAPI_KEY = "YOUR_API_KEY"`. Fallback-Kurse + sessionStorage-Cache (5 Min) + „Stand: HH:MM".
-- Optionaler PHP-Proxy `assets/goldprice.php` (Key serverseitig) via `USE_PHP_PROXY`-Schalter.
+- **Standard: schlüssellos** — `gold-api.com` (XAU/XAG/XPT in USD/oz) + `frankfurter.dev` (USD→EUR, EZB), Umrechnung in EUR/g im Client. Kein Key nötig.
+- Optional: `USE_GOLDAPI = true` → GoldAPI.io (Header `x-access-token`, `GOLDAPI_KEY`), bzw. `USE_PHP_PROXY = true` → `assets/goldprice.php` (Key serverseitig, PHP nötig).
+- Fallback-Kurse + sessionStorage-Cache (5 Min) + „Stand: HH:MM".
+
+## Fonts & Bilder
+- Schriften **lokal** unter `assets/fonts/` via `assets/fonts.css` (keine Google-Verbindung).
+- Bilder **lokal** unter `assets/img/` (keine externen googleusercontent-URLs).
 
 ## Deployment (real)
 

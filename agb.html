@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cookie-Einstellungen – GoldExpert24.de</title>
-<meta name="description" content="Informationen zu Cookies und Speichertechniken auf GoldExpert24.de sowie Verwaltung Ihrer Einwilligung."/>
+<title>AGB – GoldExpert24.de</title>
+<meta name="description" content="Allgemeine Geschäftsbedingungen für den Ankauf von Edelmetallen durch GoldExpert24.de (KoschkaWeb Technologies)."/>
 <meta name="robots" content="index,follow"/>
 <link rel="stylesheet" href="assets/fonts.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -29,6 +29,7 @@
   html { scroll-behavior: smooth; }
   .legal h2 { font-family: 'Noto Serif'; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
   .legal p, .legal li { color: #4d4637; line-height: 1.7; }
+  .legal ul { list-style: disc; padding-left: 1.25rem; margin-top: .5rem; }
   .legal a { color: #755b00; text-decoration: underline; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration:.001ms!important; animation-duration:.001ms!important; } }
 </style>
@@ -62,45 +63,104 @@
 </nav>
 
 <main class="legal max-w-3xl mx-auto px-6 md:px-8 py-16 md:py-24">
-  <h1 class="text-4xl md:text-5xl font-headline mb-4">Cookie-Einstellungen</h1>
-  <p class="text-on-surface-variant mb-8">Transparenz über die auf dieser Website eingesetzten Speichertechniken.</p>
+  <h1 class="text-4xl md:text-5xl font-headline mb-4">Allgemeine Geschäftsbedingungen</h1>
+  <p class="text-on-surface-variant mb-8">AGB für den Ankauf von Edelmetallen. Stand: Juni 2026.</p>
 
-  <h2>Welche Cookies / Speichertechniken nutzen wir?</h2>
+  <h2>§ 1 Geltungsbereich</h2>
   <p>
-    GoldExpert24.de kommt mit einem Minimum aus. Wir setzen <strong>ausschließlich technisch notwendige</strong>
-    Speichertechniken ein und verwenden <strong>keine</strong> Marketing-, Analyse- oder Tracking-Cookies.
+    Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Ankaufsgeschäfte zwischen
+    Roman Stel – KoschkaWeb Technologies, Betreiber von GoldExpert24.de (nachfolgend „Ankäufer"),
+    und der einsendenden Person (nachfolgend „Einsender"), die dem Ankäufer Edelmetalle zum Verkauf anbietet.
+    Abweichende Bedingungen des Einsenders gelten nur, soweit der Ankäufer ihnen ausdrücklich in Textform zustimmt.
   </p>
+
+  <h2>§ 2 Vertragsgegenstand</h2>
+  <p>
+    Gegenstand ist der Ankauf von Edelmetallen (u. a. Gold, Silber, Platin) in Form von Schmuck, Zahngold,
+    Bruchgold, Barren und Münzen durch den Ankäufer. Der Ankauf richtet sich an Verbraucher, die als
+    Privatpersonen eigene Gegenstände veräußern.
+  </p>
+
+  <h2>§ 3 Ablauf des Ankaufs</h2>
   <ul>
-    <li>
-      <strong>Einwilligungsspeicher</strong> (<span class="font-mono">localStorage</span>, Schlüssel <span class="font-mono">cookieConsent</span>):
-      speichert Ihre Entscheidung zum Cookie-Hinweis, damit der Banner nicht bei jedem Besuch erneut erscheint.
-    </li>
-    <li>
-      <strong>Kurs-Zwischenspeicher</strong> (<span class="font-mono">sessionStorage</span>, Schlüssel <span class="font-mono">ge24_prices</span>):
-      speichert die zuletzt abgerufenen Edelmetallkurse für wenige Minuten, um das API-Kontingent zu schonen.
-      Wird beim Schließen des Browser-Tabs automatisch gelöscht.
-    </li>
+    <li>Anforderung einer kostenlosen, versicherten Versandtasche über das Formular auf der Website.</li>
+    <li>Einsendung der Edelmetalle durch den Einsender mit der bereitgestellten Versandtasche.</li>
+    <li>Prüfung und Bewertung durch den Ankäufer (u. a. Gewicht mit geeichter Waage, Bestimmung der Legierung).</li>
+    <li>Unterbreitung eines verbindlichen Ankaufsangebots an den Einsender.</li>
+    <li>Bei Annahme: Auszahlung. Bei Ablehnung: kostenfreie, versicherte Rücksendung.</li>
   </ul>
+
+  <h2>§ 4 Preisermittlung &amp; Angebot</h2>
   <p>
-    Beide sind für den Betrieb der Seite erforderlich und nicht einwilligungspflichtig. Da kein Tracking
-    stattfindet, ist die Seite auch ohne Zustimmung uneingeschränkt nutzbar (kein „Cookie-Wall").
+    Der Ankaufspreis orientiert sich am tagesaktuellen Edelmetallkurs sowie an Art, Gewicht und Feingehalt
+    des eingesandten Materials. Im Online-Rechner ermittelte Beträge sind unverbindliche Richtwerte. Das
+    <strong>verbindliche</strong> Angebot erstellt der Ankäufer nach Eingang und Prüfung der Sendung.
   </p>
 
-  <h2>Ihre Einwilligung verwalten</h2>
-  <p>Aktueller Status Ihrer Cookie-Entscheidung:</p>
-  <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 my-6">
-    <p class="text-on-surface mb-4"><span class="font-mono" id="consentStatus">wird geladen …</span></p>
-    <div class="flex flex-wrap gap-3">
-      <button id="btnAcceptAll" class="px-5 py-2.5 rounded-lg text-sm font-bold text-on-primary bg-gradient-to-tr from-primary to-primary-container shadow-lg shadow-primary/20 hover:scale-95 transition-transform">Akzeptieren</button>
-      <button id="btnEssential" class="px-5 py-2.5 rounded-lg text-sm font-medium border border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary transition-all">Nur notwendige</button>
-      <button id="btnReset" class="px-5 py-2.5 rounded-lg text-sm font-medium border border-error/40 text-error hover:bg-error/5 transition-all">Einwilligung widerrufen / ändern</button>
-    </div>
-  </div>
-
-  <h2>Weitere Informationen</h2>
+  <h2>§ 5 Vertragsschluss</h2>
   <p>
-    Details zur Verarbeitung Ihrer Daten und zu externen Diensten finden Sie in unserer
+    Der Kaufvertrag kommt zustande, wenn der Einsender das nach Prüfung unterbreitete Angebot annimmt (z. B.
+    per E-Mail oder über den vom Ankäufer bereitgestellten Weg). Bis zur Annahme besteht keine Verpflichtung
+    einer Partei zum Abschluss.
+  </p>
+
+  <h2>§ 6 Eigentum &amp; Gefahrtragung</h2>
+  <p>
+    Mit Annahme des Angebots und Auszahlung geht das Eigentum an den eingesandten Gegenständen auf den
+    Ankäufer über. Die Sendung ist ab Einlieferung beim Versanddienstleister im Rahmen der angegebenen
+    Versicherungssumme (bis 500.000 €) versichert.
+  </p>
+
+  <h2>§ 7 Auszahlung</h2>
+  <p>
+    Nach Annahme des Angebots erfolgt die Auszahlung innerhalb von 48 Stunden per SEPA-Überweisung auf das vom
+    Einsender angegebene Konto. Eine Barauszahlung erfolgt nicht.
+  </p>
+
+  <h2>§ 8 Rücksendung</h2>
+  <p>
+    Lehnt der Einsender das Angebot ab, sendet der Ankäufer die Gegenstände kostenfrei und versichert an die
+    angegebene Adresse zurück.
+  </p>
+
+  <h2>§ 9 Legitimation &amp; Geldwäschegesetz (GwG)</h2>
+  <p>
+    Der Ankauf erfolgt gesetzeskonform nach dem Geldwäschegesetz (GwG) und wird dokumentiert. Der Ankäufer ist
+    berechtigt und ggf. verpflichtet, die Identität des Einsenders festzustellen (Vorlage eines gültigen
+    Ausweisdokuments). Der Einsender muss volljährig (mindestens 18 Jahre) sein.
+  </p>
+
+  <h2>§ 10 Zusicherung des Einsenders</h2>
+  <p>
+    Der Einsender sichert zu, alleiniger Eigentümer der eingesandten Gegenstände und zur Veräußerung
+    berechtigt zu sein und dass die Gegenstände frei von Rechten Dritter sind.
+  </p>
+
+  <h2>§ 11 Haftung</h2>
+  <p>
+    Der Ankäufer haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie für Schäden aus der
+    Verletzung des Lebens, des Körpers oder der Gesundheit. Im Übrigen haftet der Ankäufer nur bei Verletzung
+    einer wesentlichen Vertragspflicht und begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Für die
+    versicherte Sendung gilt die jeweils angegebene Versicherungssumme.
+  </p>
+
+  <h2>§ 12 Kein Widerrufsrecht</h2>
+  <p>
+    Beim Ankauf von Edelmetallen von Privatpersonen verkauft der Einsender an den Ankäufer. Ein gesetzliches
+    Widerrufsrecht für Verbraucher (Fernabsatz) besteht in dieser Konstellation regelmäßig nicht, da der
+    Verbraucher hier Verkäufer und nicht Käufer ist.
+  </p>
+
+  <h2>§ 13 Datenschutz</h2>
+  <p>
+    Informationen zur Verarbeitung personenbezogener Daten finden Sie in unserer
     <a href="datenschutz.html">Datenschutzerklärung</a>.
+  </p>
+
+  <h2>§ 14 Schlussbestimmungen</h2>
+  <p>
+    Es gilt das Recht der Bundesrepublik Deutschland. Sollte eine Bestimmung dieser AGB unwirksam sein oder
+    werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
   </p>
 </main>
 
@@ -151,22 +211,5 @@
   })();
 </script>
 <script src="assets/consent.js" defer></script>
-<script>
-  (function(){
-    var statusEl = document.getElementById('consentStatus');
-    function label(c){
-      if(!c) return 'Noch keine Auswahl getroffen.';
-      var when = c.ts ? new Date(c.ts).toLocaleString('de-DE') : '';
-      if(c.choice === 'accepted') return 'Akzeptiert' + (when ? ' am ' + when : '');
-      if(c.choice === 'essential') return 'Nur notwendige' + (when ? ' am ' + when : '');
-      return 'Unbekannt';
-    }
-    function refresh(){ if(statusEl && window.GE24Consent) statusEl.textContent = label(window.GE24Consent.get()); }
-    document.getElementById('btnAcceptAll').addEventListener('click', function(){ window.GE24Consent.set('accepted'); refresh(); var b=document.getElementById('cookieBanner'); if(b) b.remove(); });
-    document.getElementById('btnEssential').addEventListener('click', function(){ window.GE24Consent.set('essential'); refresh(); var b=document.getElementById('cookieBanner'); if(b) b.remove(); });
-    document.getElementById('btnReset').addEventListener('click', function(){ window.GE24Consent.reset(); refresh(); location.reload(); });
-    refresh();
-  })();
-</script>
 </body>
 </html>
