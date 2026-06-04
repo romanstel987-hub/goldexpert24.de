@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>GoldExpert24.de - Gold verkaufen. Ehrlich. Transparent. Einfach.</title>
-<meta name="description" content="Gold verkaufen zum tagesaktuellen Bestpreis. Versichert bis 500.000 Euro. Auszahlung in 24h. Kostenlose Versandtasche anfordern."/>
+<meta name="description" content="Gold verkaufen zum tagesaktuellen Bestpreis. Versichert bis 500.000 €. Auszahlung in 48 Stunden per SEPA-Überweisung. Kostenlose Versandtasche anfordern."/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -83,6 +83,14 @@
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
   html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
 </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
@@ -131,21 +139,21 @@
         <span class="text-primary italic">Ehrlich.</span> Transparent. Einfach.
       </h1>
       <p class="text-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
-        Wir bewerten Ihr Edelmetall nach tagesaktuellen Borsenkursen &ndash; ohne versteckte Abzuge. Deutschlands diskreteste Losung fur den Goldankauf.
+        Wir bewerten Ihr Edelmetall nach tagesaktuellen Börsenkursen – ohne versteckte Abzüge. Deutschlands diskreteste Lösung für den Goldankauf.
       </p>
       <!-- Trust Icons -->
       <div class="flex flex-wrap gap-6 md:gap-8 items-center opacity-80">
         <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary">verified</span>
-          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Zertifiziert</span>
-        </div>
-        <div class="flex items-center gap-3">
           <span class="material-symbols-outlined text-primary">security</span>
-          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Versichert bis 500k&euro;</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Versichert bis 500.000 €</span>
         </div>
         <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary">update</span>
-          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">24h Auszahlung</span>
+          <span class="material-symbols-outlined text-primary">account_balance</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Auszahlung in 48 h per SEPA</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">gavel</span>
+          <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">GwG-konformer Ankauf</span>
         </div>
       </div>
     </div>
@@ -164,8 +172,18 @@
           <button class="metal-tab flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface rounded-lg" data-metal="platin">Platin</button>
         </div>
 
+        <!-- Category Selection (nur für Gold sichtbar) -->
+        <div id="categoryWrap" class="mb-8">
+          <label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-4">Art des Goldes</label>
+          <div class="grid grid-cols-1 gap-2" id="categoryGrid">
+            <button class="cat-btn border border-primary py-3 px-4 rounded-lg text-sm text-left text-primary font-bold bg-primary/5 transition-all" data-cat="feingold">Anlagegold (Barren / Münzen)</button>
+            <button class="cat-btn border border-outline-variant/30 py-3 px-4 rounded-lg text-sm text-left hover:border-primary hover:text-primary transition-all" data-cat="schmuck">Goldschmuck</button>
+            <button class="cat-btn border border-outline-variant/30 py-3 px-4 rounded-lg text-sm text-left hover:border-primary hover:text-primary transition-all" data-cat="zahngold">Zahngold &amp; Bruchgold</button>
+          </div>
+        </div>
+
         <!-- Alloy Selection -->
-        <label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-4">Feingehalt wahlen</label>
+        <label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-4">Feingehalt wählen</label>
         <div class="grid grid-cols-3 gap-2 mb-8" id="alloyGrid">
           <button class="alloy-btn border border-outline-variant/30 py-3 rounded-lg text-sm hover:border-primary hover:text-primary transition-all" data-purity="0.333" data-label="333 (8k)">333 (8k)</button>
           <button class="alloy-btn border border-primary py-3 rounded-lg text-sm text-primary font-bold bg-primary/5" data-purity="0.585" data-label="585 (14k)">585 (14k)</button>
@@ -182,12 +200,15 @@
         </div>
 
         <!-- Result Display -->
-        <div class="bg-surface-dim/20 rounded-xl p-6 mb-8 text-center">
+        <div class="bg-surface-dim/20 rounded-xl p-6 mb-4 text-center">
           <span class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Voraussichtlicher Ankaufswert</span>
           <div class="text-4xl font-mono font-bold text-on-surface" id="calcResult">
             0,00 <span class="text-xl font-normal text-primary">&euro;</span>
           </div>
         </div>
+        <p class="text-[11px] text-on-surface-variant leading-relaxed text-center mb-8 px-2">
+          Richtwert zum aktuellen Tageskurs – Ihr verbindliches Angebot erhalten Sie nach der Prüfung.
+        </p>
 
         <a href="#versandtasche" class="block w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform text-center">
           Versandtasche anfordern
@@ -197,34 +218,28 @@
   </div>
 </header>
 
-<!-- Trust Band -->
+<!-- Trust Band — ehrliche, verifizierbare Signale -->
+<!-- TODO: Google-Rezensionen / Trusted-Shops-Widget einbinden, sobald echte Bewertungen vorliegen. KEINE Fake-Zahlen. -->
 <section class="bg-surface-container-low border-y border-outline-variant/10">
-  <div class="max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-10 flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-8">
-    <div class="flex items-center gap-4">
-      <div class="flex text-[#ffb400]">
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
-      </div>
-      <div>
-        <p class="font-bold text-sm">Trustpilot 4.9/5.0</p>
-        <p class="text-xs text-on-surface-variant">Aus uber 1.200 Bewertungen</p>
-      </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-10 flex flex-wrap justify-center md:justify-around items-center gap-6 md:gap-8">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">verified_user</span>
+      <p class="text-sm font-medium">Versichert bis 500.000 €</p>
     </div>
     <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
     <div class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-stone-400">lock</span>
-      <p class="text-sm font-medium">SSL Verschlusselt</p>
+      <span class="material-symbols-outlined text-primary">account_balance</span>
+      <p class="text-sm font-medium">Auszahlung in 48 h per SEPA</p>
     </div>
+    <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
     <div class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-stone-400">security</span>
-      <p class="text-sm font-medium">500.000&euro; Versicherung</p>
+      <span class="material-symbols-outlined text-primary">lock</span>
+      <p class="text-sm font-medium">SSL-verschlüsselt</p>
     </div>
+    <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
     <div class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-stone-400">speed</span>
-      <p class="text-sm font-medium">24h Auszahlungs-Garantie</p>
+      <span class="material-symbols-outlined text-primary">gavel</span>
+      <p class="text-sm font-medium">Geprüfter, gesetzeskonformer Ankauf</p>
     </div>
   </div>
 </section>
@@ -233,7 +248,7 @@
 <section class="py-20 md:py-32 bg-surface">
   <div class="max-w-7xl mx-auto px-6 md:px-8 text-center">
     <h2 class="text-3xl md:text-4xl font-headline mb-4">In 4 Schritten zu Ihrem Geld</h2>
-    <p class="text-on-surface-variant mb-16 md:mb-20 max-w-2xl mx-auto">Sicher, diskret und vollversichert. Der einfachste Weg, Edelmetalle zu veraussern.</p>
+    <p class="text-on-surface-variant mb-16 md:mb-20 max-w-2xl mx-auto">Sicher, diskret und vollversichert. Der einfachste Weg, Edelmetalle zu veräußern.</p>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
       <!-- Connector line for desktop -->
       <div class="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px border-t border-dashed border-outline-variant"></div>
@@ -259,7 +274,7 @@
           <span class="material-symbols-outlined text-3xl text-primary">search</span>
         </div>
         <h3 class="font-bold mb-2">Analyse &amp; Angebot</h3>
-        <p class="text-sm text-on-surface-variant px-4">Unsere Experten prufen Ihr Gold unter Videoaufsicht.</p>
+        <p class="text-sm text-on-surface-variant px-4">Unsere Experten prüfen Ihr Gold unter Videoaufsicht.</p>
       </div>
       <!-- Step 4 -->
       <div class="relative z-10 flex flex-col items-center">
@@ -267,7 +282,7 @@
           <span class="material-symbols-outlined text-3xl text-primary">euro</span>
         </div>
         <h3 class="font-bold mb-2">Geld erhalten</h3>
-        <p class="text-sm text-on-surface-variant px-4">Sofortige Auszahlung per Blitzberweisung.</p>
+        <p class="text-sm text-on-surface-variant px-4">Auszahlung in 48 Stunden per SEPA-Überweisung.</p>
       </div>
     </div>
   </div>
@@ -280,16 +295,16 @@
       <div>
         <h2 class="text-3xl md:text-4xl font-headline mb-8">So berechnen wir Ihren Preis</h2>
         <p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
-          Keine versteckten Gebuhren. Keine &bdquo;Bearbeitungspauschalen&ldquo;. Wir setzen auf mathematische Prazision und volle Transparenz. Unser Algorithmus aktualisiert sich alle 60 Sekunden basierend auf dem London Bullion Market.
+          Keine versteckten Gebühren. Keine „Bearbeitungspauschalen". Wir setzen auf Präzision und volle Transparenz. Unsere Kurse orientieren sich laufend am London Bullion Market.
         </p>
         <ul class="space-y-4">
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <span>Echtzeit-Anbindung an globale Goldborsen</span>
+            <span>Tagesaktuelle Kurse auf Basis globaler Goldbörsen</span>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <span>Prazise Gewichtsermittlung mit geeichten Waagen</span>
+            <span>Präzise Gewichtsermittlung mit geeichten Waagen</span>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
@@ -306,7 +321,7 @@
           </div>
           <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-12">
             <div class="flex flex-col items-center">
-              <span class="text-2xl md:text-3xl font-mono font-bold">Borsenkurs</span>
+              <span class="text-2xl md:text-3xl font-mono font-bold">Börsenkurs</span>
               <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Aktueller Spotpreis</span>
             </div>
             <span class="text-2xl text-primary font-bold">&times;</span>
@@ -316,8 +331,8 @@
             </div>
             <span class="text-2xl text-primary font-bold">&times;</span>
             <div class="flex flex-col items-center">
-              <span class="text-2xl md:text-3xl font-mono font-bold">Faktor</span>
-              <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Feste Handelsspanne</span>
+              <span class="text-2xl md:text-3xl font-mono font-bold">Kategorie</span>
+              <span class="text-[10px] uppercase tracking-tighter text-on-surface-variant mt-2">Art Ihres Edelmetalls</span>
             </div>
           </div>
           <div class="w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-12"></div>
@@ -327,9 +342,9 @@
               <span class="text-xs font-medium text-primary">Live Preis-Update</span>
             </div>
             <div class="text-4xl md:text-5xl font-mono font-bold text-on-surface">
-              67,42 &euro; <span class="text-lg font-normal text-on-surface-variant">/ g</span>
+              <span id="spotDisplay">67,42 €</span> <span class="text-lg font-normal text-on-surface-variant">/ g</span>
             </div>
-            <p class="text-xs text-on-surface-variant mt-4">Referenzpreis fur Feingold 999.9</p>
+            <p class="text-xs text-on-surface-variant mt-4">Referenzpreis für Feingold 999,9 · <span id="spotStamp" class="font-mono">Stand: --:-- Uhr</span></p>
           </div>
         </div>
       </div>
@@ -374,9 +389,9 @@
       <!-- Munzen -->
       <div class="group cursor-pointer">
         <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-low">
-          <img alt="Goldmunzen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYPfIoq8qOAM32ejUpnV3pNX2ndOb9Rskr8AAApMzvsEkxwKYSuzpe_fWMemhQVQdeRlNn4MIkeXjxePK0y3_hzlQmcjwAwM7VNqmWPaosnUSYwq401RUbtHmfkPOoc5gwyBOQiv7n1stVWkBn8c5AFq2jI4FwKPRU2SHS6GWurRJG5YzzTzvyaXTPYGSFe3TVZzxM-lSZYLmnvzO8ppSbxlyUlcoHi5_XR-j-3kcFqPUUWmHSzo_XgXmW9rB0thksMG8iGuBZh8I"/>
+          <img alt="Goldmünzen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYPfIoq8qOAM32ejUpnV3pNX2ndOb9Rskr8AAApMzvsEkxwKYSuzpe_fWMemhQVQdeRlNn4MIkeXjxePK0y3_hzlQmcjwAwM7VNqmWPaosnUSYwq401RUbtHmfkPOoc5gwyBOQiv7n1stVWkBn8c5AFq2jI4FwKPRU2SHS6GWurRJG5YzzTzvyaXTPYGSFe3TVZzxM-lSZYLmnvzO8ppSbxlyUlcoHi5_XR-j-3kcFqPUUWmHSzo_XgXmW9rB0thksMG8iGuBZh8I"/>
         </div>
-        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Munzen</h3>
+        <h3 class="text-center font-bold text-sm uppercase tracking-wider">Münzen</h3>
       </div>
       <!-- Silber -->
       <div class="group cursor-pointer">
@@ -403,15 +418,15 @@
       <div class="flex-1 p-10 md:p-16 lg:p-24 flex flex-col justify-center">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-headline text-white mb-8">Wir sind echte Menschen.</h2>
         <p class="text-stone-400 text-lg leading-relaxed mb-10">
-          In einer Welt voller automatisierter Portale glauben wir an den Wert personlicher Expertise. Unser Team aus erfahrenen Gutachtern und Goldschmieden steht Ihnen bei jedem Schritt mit Rat und Tat zur Seite.
+          In einer Welt voller automatisierter Portale glauben wir an den Wert persönlicher Expertise. Unser Team aus erfahrenen Gutachtern und Goldschmieden steht Ihnen bei jedem Schritt mit Rat und Tat zur Seite.
         </p>
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30">
-            <img alt="Stefan Hartmann" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DKF7TLqg6TNXb6fdUUM1NpLkzSsHtCaht9SShe_9V47wv85vjAhfV_6HOPc0AzghsHOmvhzJfvfWE2eK8iNcf_R178ZYg_5R1QLJUAoKF5dDpI-4Hq3OyE2hMwEAEMWRQ0nUvdkwlbjKPK_fGqsH1Z3EuBDf3xtyS3owwZuKaJMglM0glxjk1Cy85_ZE0Ct4XglsYH4lKpnE6uwekvVIjqlLlL689vWgEkGob7aB-PrSg8o4sLfyslpDxO_D970h_x_R2WHFAio"/>
+          <div class="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary">groups</span>
           </div>
           <div>
-            <p class="text-white font-bold">Stefan Hartmann</p>
-            <p class="text-stone-500 text-sm italic">Chef-Gutachter</p>
+            <p class="text-white font-bold">Das GoldExpert24-Gutachterteam</p>
+            <p class="text-stone-500 text-sm italic">Geprüfte Edelmetall-Sachverständige</p>
           </div>
         </div>
       </div>
@@ -427,8 +442,8 @@
 <section class="py-20 md:py-32 bg-surface">
   <div class="max-w-3xl mx-auto px-6 md:px-8">
     <div class="text-center mb-12 md:mb-16">
-      <h2 class="text-3xl md:text-4xl font-headline mb-4">Haufige Fragen</h2>
-      <p class="text-on-surface-variant">Alles was Sie uber den Ankauf wissen mussen.</p>
+      <h2 class="text-3xl md:text-4xl font-headline mb-4">Häufige Fragen</h2>
+      <p class="text-on-surface-variant">Alles was Sie über den Ankauf wissen müssen.</p>
     </div>
     <div class="space-y-6" id="faqAccordion">
       <!-- FAQ Item 1 -->
@@ -438,7 +453,7 @@
           <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
         </button>
         <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
-          <p>Ja, absolut. Wir stellen Ihnen eine Versandtasche zur Verfugung, die ab dem Moment der Einlieferung bei der Deutschen Post vollversichert ist. Fur besonders wertvolle Sendungen uber 2.500&euro; bieten wir zudem einen kostenlosen Wertkurier-Service an.</p>
+          <p>Ja, absolut. Wir stellen Ihnen eine Versandtasche zur Verfügung, die ab dem Moment der Einlieferung bei der Deutschen Post versichert ist – bis zu einer Sendungssumme von 500.000 €. Für besonders wertvolle Sendungen bieten wir zudem einen kostenlosen Wertkurier-Service an.</p>
         </div>
       </div>
       <!-- FAQ Item 2 -->
@@ -448,18 +463,79 @@
           <span class="material-symbols-outlined text-stone-400 group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
         </button>
         <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
-          <p>In der Regel erhalten Sie unser Angebot am Tag des Sendungseingangs. Nach Ihrer Bestatigung uberweisen wir den Betrag sofort. Das Geld ist meist innerhalb weniger Stunden, spatestens am nachsten Werktag auf Ihrem Konto.</p>
+          <p>In der Regel erhalten Sie unser Angebot am Tag des Sendungseingangs. Nach Ihrer Bestätigung erfolgt die Auszahlung innerhalb von 48 Stunden per SEPA-Überweisung auf Ihr Konto.</p>
         </div>
       </div>
       <!-- FAQ Item 3 -->
       <div class="faq-item border-b border-outline-variant/30 pb-6">
         <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg hover:text-primary transition-colors group">
-          Was passiert, wenn mir das Angebot nicht gefallt?
+          Was passiert, wenn mir das Angebot nicht gefällt?
           <span class="material-symbols-outlined text-stone-400 group-hover:rotate-180 transition-transform duration-300 faq-icon">expand_more</span>
         </button>
         <div class="faq-content mt-4 text-on-surface-variant leading-relaxed overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
-          <p>Transparenz bedeutet fur uns auch Wahlfreiheit. Falls Sie unser Angebot ablehnen, schicken wir Ihnen Ihre Gegenstande kostenfrei und versichert wieder zuruck. Ohne Wenn und Aber.</p>
+          <p>Transparenz bedeutet für uns auch Wahlfreiheit. Falls Sie unser Angebot ablehnen, schicken wir Ihnen Ihre Gegenstände kostenfrei und versichert wieder zurück. Ohne Wenn und Aber.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Versandtaschen-Bestellung -->
+<section id="versandtasche" class="py-20 md:py-32 bg-surface-container-low">
+  <div class="max-w-3xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-10 md:mb-12">
+      <span class="text-xs font-label uppercase tracking-widest text-primary">Kostenlos &amp; unverbindlich</span>
+      <h2 class="text-3xl md:text-4xl font-headline mt-3 mb-4">Versandtasche anfordern</h2>
+      <p class="text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+        Kostenlose, versicherte Versandtasche – versichert bis 500.000 €. Auszahlung in 48 Stunden per SEPA-Überweisung. Wir melden uns zeitnah bei Ihnen.
+      </p>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl shadow-xl shadow-stone-200/40 border-t-4 border-primary p-8 md:p-12">
+      <!-- TODO: echte Formspree-Form-ID eintragen (https://formspree.io) -->
+      <form id="versandForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-8">
+        <!-- Honeypot gegen Spam (versteckt) -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
+
+        <div>
+          <label for="vName" class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Name</label>
+          <input id="vName" name="Name" type="text" required class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary focus:ring-0 py-3 text-lg placeholder:text-surface-dim" placeholder="Vor- und Nachname"/>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label for="vEmail" class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">E-Mail</label>
+            <input id="vEmail" name="E-Mail" type="email" required class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary focus:ring-0 py-3 text-lg placeholder:text-surface-dim" placeholder="name@beispiel.de"/>
+          </div>
+          <div>
+            <label for="vPhone" class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Telefon <span class="normal-case tracking-normal text-surface-dim">(optional)</span></label>
+            <input id="vPhone" name="Telefon" type="tel" class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary focus:ring-0 py-3 text-lg placeholder:text-surface-dim" placeholder="+49 …"/>
+          </div>
+        </div>
+
+        <div>
+          <label for="vDesc" class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2">Grobe Beschreibung / Gewicht <span class="normal-case tracking-normal text-surface-dim">(optional)</span></label>
+          <textarea id="vDesc" name="Beschreibung" rows="3" class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary focus:ring-0 py-3 placeholder:text-surface-dim" placeholder="z. B. Goldkette 585, ca. 12 g; einige Münzen"></textarea>
+        </div>
+
+        <label class="flex items-start gap-3 text-sm text-on-surface-variant cursor-pointer">
+          <input id="vConsent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary"/>
+          <span>Ich habe die <a href="datenschutz.html" class="text-primary underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.</span>
+        </label>
+
+        <div>
+          <button type="submit" class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
+            Versandtasche kostenlos anfordern
+          </button>
+          <p id="formError" class="hidden text-error text-sm mt-3 text-center transition-opacity duration-300"></p>
+        </div>
+      </form>
+
+      <!-- Erfolgsmeldung (sanft eingeblendet) -->
+      <div id="formSuccess" class="hidden text-center py-8 opacity-0 transition-opacity duration-500">
+        <span class="material-symbols-outlined text-primary text-5xl mb-4">mark_email_read</span>
+        <h3 class="text-2xl font-headline mb-2">Vielen Dank!</h3>
+        <p class="text-on-surface-variant max-w-md mx-auto">Ihre Anfrage ist bei uns eingegangen. Wir senden Ihnen zeitnah Ihre kostenlose, versicherte Versandtasche zu.</p>
       </div>
     </div>
   </div>
@@ -471,7 +547,7 @@
     <div class="col-span-1">
       <div class="mb-6"><img src="assets/logo-white.svg" alt="GoldExpert24.de" class="h-8 text-white"></div>
       <p class="font-headline text-stone-300 text-sm leading-relaxed mb-6">
-        Ihr vertrauensvoller Partner fur den Ankauf von Edelmetallen. Sicher, diskret und zum tagesaktuellen Bestpreis.
+        Ihr vertrauensvoller Partner für den Ankauf von Edelmetallen. Sicher, diskret und zum tagesaktuellen Bestpreis.
       </p>
       <div class="flex gap-4">
         <span class="material-symbols-outlined text-stone-500 hover:text-[#c9a84c] cursor-pointer">public</span>
@@ -491,10 +567,10 @@
     <div class="col-span-1">
       <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Rechtliches</h4>
       <ul class="space-y-4">
-        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Impressum</a></li>
-        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Datenschutz</a></li>
-        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">AGB</a></li>
-        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="#">Widerrufsbelehrung</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="impressum.html">Impressum</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a></li>
+        <li><a class="font-headline text-stone-500 hover:text-white transition-colors" href="cookies.html">Cookie-Einstellungen</a></li>
+        <li class="font-headline text-stone-600 text-xs leading-relaxed pt-2">Beim Ankauf von Privatpersonen besteht kein gesetzliches Widerrufsrecht.</li>
       </ul>
     </div>
     <div class="col-span-1">
@@ -502,15 +578,15 @@
       <ul class="space-y-4 text-stone-300 text-sm">
         <li class="flex items-center gap-3">
           <span class="material-symbols-outlined text-[#c9a84c] text-sm">call</span>
-          0800 123 456 78
+          <a href="tel:+4917647601824" class="hover:text-white transition-colors">+49 176 47601824</a>
         </li>
         <li class="flex items-center gap-3">
           <span class="material-symbols-outlined text-[#c9a84c] text-sm">mail</span>
-          info@goldexpert24.de
+          <a href="mailto:info@goldexpert24.de" class="hover:text-white transition-colors">info@goldexpert24.de</a>
         </li>
-        <li class="flex items-center gap-3">
+        <li class="flex items-start gap-3">
           <span class="material-symbols-outlined text-[#c9a84c] text-sm">location_on</span>
-          Edelmetallzentrum Munchen
+          <span>KoschkaWeb Technologies<br>92237 Sulzbach-Rosenberg<br>Deutschland</span>
         </li>
       </ul>
     </div>
@@ -539,11 +615,39 @@
   // ==================
   // Calculator Logic
   // ==================
-  const PRICES = {
+  // === GoldExpert24 \u2014 interne Auszahlungss\u00E4tze ===
+  // WICHTIG: Diese S\u00E4tze werden dem Nutzer NICHT angezeigt (kein Prozent, keine Formel sichtbar).
+  // Nur das berechnete Euro-Ergebnis erscheint im UI. Vom Kunden festgelegt:
+  const PAYOUT_RATES = {
+    feingold: 0.95,   // Barren, M\u00FCnzen, Anlagegold
+    schmuck:  0.75,   // Goldschmuck (Altgold)
+    zahngold: 0.50    // Zahngold / Bruchgold
+  };
+
+  // Fallback-Kurse (\u20AC/g Feingold 999,9), falls die API nicht erreichbar ist.
+  // Stand: Platzhalter \u2014 werden durch Live-Kurse \u00FCberschrieben, sobald die API antwortet.
+  const FALLBACK_PRICES = {
     gold:   67.42,
     silber: 0.83,
     platin: 29.50
   };
+
+  // =====================================================================
+  // GOLDAPI.IO \u2014 API-KEY HIER EINTRAGEN
+  // Kostenlosen Key holen: https://www.goldapi.io/dashboard
+  // Hinweis: Steht der Key hier im Client-JS, ist er \u00F6ffentlich sichtbar.
+  // Sicherer: PHP-Proxy nutzen (USE_PHP_PROXY = true, Key in assets/goldprice.php).
+  // =====================================================================
+  const GOLDAPI_KEY = "YOUR_API_KEY"; // TODO: echten GoldAPI.io-Key eintragen
+  const USE_PHP_PROXY = false;        // true, sobald assets/goldprice.php (mit PHP) verf\u00FCgbar ist
+  const PHP_PROXY_URL = "assets/goldprice.php"; // erwartet ?metal=XAU|XAG|XPT
+  const CACHE_KEY = "ge24_prices";
+  const CACHE_TTL_MS = 5 * 60 * 1000; // 5 Minuten \u2014 schont das API-Kontingent
+  const OZ_TO_GRAM = 31.1035;
+  const METAL_SYMBOL = { gold: "XAU", silber: "XAG", platin: "XPT" };
+
+  // Aktive Preise (\u20AC/g Feingold) \u2014 starten mit Fallback, werden von der API \u00FCberschrieben.
+  let PRICES = Object.assign({}, FALLBACK_PRICES);
 
   const ALLOYS = {
     gold:   [
@@ -572,12 +676,25 @@
 
   let currentMetal = 'gold';
   let currentPurity = 0.585;
-  const FACTOR = 0.95;
+  let currentCategory = 'feingold'; // wirkt nur bei Gold; Silber/Platin nutzen feingold-Satz
 
   const metalTabs = document.querySelectorAll('.metal-tab');
   const alloyGrid = document.getElementById('alloyGrid');
   const weightInput = document.getElementById('weightInput');
   const calcResult = document.getElementById('calcResult');
+  const categoryWrap = document.getElementById('categoryWrap');
+  const catButtons = document.querySelectorAll('.cat-btn');
+  const spotDisplay = document.getElementById('spotDisplay');
+  const spotStamp = document.getElementById('spotStamp');
+
+  function fmtEur(value) {
+    return value.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function activeRate() {
+    // Gold: gew\u00E4hlte Kategorie. Silber/Platin: Feingold-Satz (Kunde hat nur Gold-S\u00E4tze definiert).
+    return currentMetal === 'gold' ? PAYOUT_RATES[currentCategory] : PAYOUT_RATES.feingold;
+  }
 
   function setActiveMetal(metal) {
     currentMetal = metal;
@@ -590,7 +707,23 @@
         tab.classList.add('text-on-surface-variant');
       }
     });
+    // Kategorie-Auswahl nur bei Gold zeigen
+    if (categoryWrap) categoryWrap.style.display = (metal === 'gold') ? '' : 'none';
     renderAlloys();
+    calculate();
+  }
+
+  function setActiveCategory(cat) {
+    currentCategory = cat;
+    catButtons.forEach(function(b) {
+      if (b.dataset.cat === cat) {
+        b.classList.add('border-primary', 'text-primary', 'font-bold', 'bg-primary/5');
+        b.classList.remove('border-outline-variant/30', 'hover:border-primary', 'hover:text-primary');
+      } else {
+        b.classList.remove('border-primary', 'text-primary', 'font-bold', 'bg-primary/5');
+        b.classList.add('border-outline-variant/30', 'hover:border-primary', 'hover:text-primary');
+      }
+    });
     calculate();
   }
 
@@ -603,7 +736,6 @@
       btn.textContent = alloy.label;
       btn.dataset.purity = alloy.purity;
 
-      // Default selection: second item for gold, first for others
       var defaultIndex = currentMetal === 'gold' ? 1 : 0;
       if (index === defaultIndex) {
         currentPurity = alloy.purity;
@@ -630,9 +762,80 @@
   function calculate() {
     var weight = parseFloat(weightInput.value) || 0;
     var pricePerGram = PRICES[currentMetal];
-    var result = weight * pricePerGram * currentPurity * FACTOR;
-    var formatted = result.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    calcResult.innerHTML = formatted + ' <span class="text-xl font-normal text-primary">\u20AC</span>';
+    // Ergebnis = Gewicht \u00D7 Feingold-Grammpreis \u00D7 Reinheit \u00D7 Auszahlungssatz (intern, unsichtbar)
+    var result = weight * pricePerGram * currentPurity * activeRate();
+    calcResult.innerHTML = fmtEur(result) + ' <span class="text-xl font-normal text-primary">\u20AC</span>';
+  }
+
+  function updateSpotDisplay() {
+    if (spotDisplay) spotDisplay.textContent = fmtEur(PRICES.gold) + ' \u20AC';
+    if (spotStamp) {
+      var t = new Date();
+      var hh = String(t.getHours()).padStart(2, '0');
+      var mm = String(t.getMinutes()).padStart(2, '0');
+      spotStamp.textContent = 'Stand: ' + hh + ':' + mm + ' Uhr';
+    }
+  }
+
+  // ---- Live-Kurse von GoldAPI.io (mit Cache + Fallback) ----
+  function readCache() {
+    try {
+      var raw = sessionStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var obj = JSON.parse(raw);
+      if (!obj || (Date.now() - obj.ts) > CACHE_TTL_MS) return null;
+      return obj.prices;
+    } catch (e) { return null; }
+  }
+
+  function writeCache(prices) {
+    try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), prices: prices })); } catch (e) {}
+  }
+
+  function fetchMetal(metalKey) {
+    var symbol = METAL_SYMBOL[metalKey];
+    var url, opts;
+    if (USE_PHP_PROXY) {
+      url = PHP_PROXY_URL + '?metal=' + symbol;
+      opts = {};
+    } else {
+      url = 'https://www.goldapi.io/api/' + symbol + '/EUR';
+      opts = { headers: { 'x-access-token': GOLDAPI_KEY, 'Content-Type': 'application/json' } };
+    }
+    return fetch(url, opts).then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    }).then(function(data) {
+      // bevorzugt price_gram_24k (\u20AC/g Feingold), sonst aus price (\u20AC/oz) umrechnen
+      var perGram = data.price_gram_24k;
+      if (typeof perGram !== 'number' && typeof data.price === 'number') perGram = data.price / OZ_TO_GRAM;
+      if (typeof perGram !== 'number' || !isFinite(perGram) || perGram <= 0) throw new Error('no price');
+      return perGram;
+    });
+  }
+
+  function loadLivePrices() {
+    var cached = readCache();
+    if (cached) {
+      PRICES = Object.assign({}, FALLBACK_PRICES, cached);
+      updateSpotDisplay();
+      calculate();
+      return;
+    }
+    Promise.allSettled([fetchMetal('gold'), fetchMetal('silber'), fetchMetal('platin')])
+      .then(function(results) {
+        var next = Object.assign({}, FALLBACK_PRICES);
+        var keys = ['gold', 'silber', 'platin'];
+        var gotAny = false;
+        results.forEach(function(res, i) {
+          if (res.status === 'fulfilled') { next[keys[i]] = res.value; gotAny = true; }
+        });
+        PRICES = next;
+        if (gotAny) writeCache(next);
+        else console.warn('GoldAPI nicht erreichbar \u2013 nutze Fallback-Kurse.');
+        updateSpotDisplay();
+        calculate();
+      });
   }
 
   metalTabs.forEach(function(tab) {
@@ -641,9 +844,17 @@
     });
   });
 
+  catButtons.forEach(function(b) {
+    b.addEventListener('click', function() { setActiveCategory(this.dataset.cat); });
+  });
+
   if (weightInput) {
     weightInput.addEventListener('input', calculate);
   }
+
+  // Initialisierung
+  updateSpotDisplay();
+  loadLivePrices();
 
   // ==================
   // FAQ Accordion
@@ -678,7 +889,57 @@
     });
   });
 
+  // ==================
+  // Versandtaschen-Formular (Formspree, AJAX)
+  // ==================
+  var versandForm = document.getElementById('versandForm');
+  var formSuccess = document.getElementById('formSuccess');
+  var formError = document.getElementById('formError');
+
+  function showFormError(msg) {
+    if (!formError) return;
+    formError.textContent = msg;
+    formError.classList.remove('hidden');
+  }
+
+  if (versandForm) {
+    versandForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (formError) formError.classList.add('hidden');
+
+      // Honeypot: wenn ausgefüllt -> stiller Abbruch (Bot)
+      if (versandForm.querySelector('[name="_gotcha"]').value) return;
+
+      var action = versandForm.getAttribute('action') || '';
+      if (action.indexOf('YOUR_FORM_ID') !== -1) {
+        showFormError('Formular noch nicht aktiv: Bitte Formspree-Form-ID eintragen.');
+        return;
+      }
+
+      var submitBtn = versandForm.querySelector('button[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('opacity-60'); }
+
+      fetch(action, {
+        method: 'POST',
+        body: new FormData(versandForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        versandForm.classList.add('hidden');
+        if (formSuccess) {
+          formSuccess.classList.remove('hidden');
+          requestAnimationFrame(function() { formSuccess.classList.remove('opacity-0'); });
+        }
+      }).catch(function() {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('opacity-60'); }
+        showFormError('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an info@goldexpert24.de.');
+      });
+    });
+  }
+
 })();
 </script>
+<!-- Cookie-Consent-Banner (schlank, transparenzgetrieben) -->
+<script src="assets/consent.js" defer></script>
 </body>
 </html>
